@@ -1,39 +1,35 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Dart Tokenizer
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/tools/pub/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A small Dart package for training, using, inspecting, and evaluating tokenizers.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Custom byte-level BPE tokenizer implemented from scratch
+- BPE tokenizer training with configurable vocabulary size
+- Encoding and decoding with progress reporting
+- Save and load trained BPE tokenizers
+- Human-readable BPE vocabulary and merge inspection
+- Tokenizer evaluation metrics:
+    - Tokens per word
+    - Bytes per token
+    - Characters per token
+    - Encoding speed
+- `tiktoken` support for comparison with existing tokenizers
+- Common `Tokenizer` interface for different implementations
+- CLI tools for training and evaluation
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
-```
+import 'package:dart_tokenizer/dart_tokenizer.dart';
 
-## Additional information
+final trainer = BpeTrainer();
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+final tokenizer = trainer.train(
+  corpus,
+  name: 'Custom BPE',
+  vocabularySize: 8000,
+);
+
+final tokens = tokenizer.encode('Hello world!');
+final decoded = tokenizer.decode(tokens);
