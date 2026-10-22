@@ -1,0 +1,490 @@
+However, I didn’t want to bore you guys with rants about the World Feed letting viewers down. There aren’t likely to be that many readers as gung ho about sports car racing as I am. However, I didn’t get a chance to write about something that might actually interest you.
+As always, we at Frontstretch send our congrats to Vincie and her fiancé, Blake. Sounds like the next four months will be rather interesting in her household.
+However, it does raise the question of what happens when Vincie goes out on maternity leave. She’s got a number of roles with FOX Sports’ NASCAR coverage. The roles include pit reporting during Camping World Truck Series race broadcasts, appearances on NASCAR RaceDay, RaceHub reporting and the Facebook interview show Off Track. Subs will have to be tapped to fill those roles. I have no doubt that FOX Sports will miss Vincie’s presence during her leave.
+While the Monster Energy NASCAR Cup and XFINITY Series teams were racing in Texas, the ARCA Racing Series presented by Menards returned to MAVTV for the first time in a number of years. The Toledo-based series has signed a multi-year deal to put races on the Lucas Oil-owned network, replacing their deal with the Sinclair Broadcast Group-owned American Sports Network (ASN) for good reason. Last month, ASN quietly folded. ARCA had the MAVTV deal done months before the closure, but it just goes to show that they had to find a new entity.
+The first race in MAVTV’s new deal was the Music City 200 at Nashville Fairgrounds Speedway. This race has jumped around TV-wise in the past couple of years. In 2015, it aired on ARCA’s website via pay-per-view. Last year, it was the first race that was recorded to air on ASN (the premiere came months later). Regardless, an interesting night of short track action was nigh.
+Since I do not get MAVTV at home, I had to watch the race broadcast on Lucas Oil Racing TV. Watching this race was the first time I used the Lucas Oil Racing TV app on my Xbox 360, so I’ll be talking about that as well.
+Quick note for those of you who want to watch the race on Lucas Oil Racing TV. The saved streams include commercials. You’ll have to skip past those. Or, go ahead and sit through them.
+For the races, MAVTV has Ken Stout and Rob Klepper in the broadcast booth. These two are experienced commentators that know quite a bit about the series. Same with Jim Tretow, who served as the pit reporter.
+Sadly, there were technical issues almost from the start of the race. The sound went out just after the green came out. Luckily, it came back relatively quickly. Additional audio issues did negatively affect the broadcast.
+Production values-wise, what viewers saw back on Apr. 8 is somewhat similar in scope to what I saw last year on ASN. There were a somewhat limited number of cameras available. Those that were on-site were typically trained onto the frontrunners. This created some problems.
+The problems weren’t so much about the lack of action being shown. That wasn’t the issue. The issue is that this was a race with 11 cautions, seven for on-track incidents. I think we got replays of maybe two of those incidents. One crash resulted in a verbal confrontation between Bobby Gerhart and (I think) Vinnie Miller. I can’t fully confirm that because I’d never seen Miller race before in anything (this race was his ARCA Racing Series presented by Menards debut). Also, the booth didn’t mention that it was Miller being berated (for lack of better words) by the veteran Gerhart.
+Yes, I know that Gerhart and Miller were eliminated in the same crash. What we don’t know is what caused the wreck. There were no replays. The coverage just cut to the crash after it had already happened. Basically, if you hadn’t seen that, it was an argument apropos of nothing. There were no in-race interviews with any driver that had been eliminated, so we can’t use that to our advantage, either.
+In the latest episode of the 2018 Frontstretch Podcast, we review an action-packed weekend of racing at Chicagoland Speedway with Dustin Albino, Mike Neff, Zach Catanzareti and Corey LaJoie, driver of the No. 72 TriStar Motorsports Chevrolet.
+Kyle Busch took home his fifth checkered flag of the season on Sunday in the Windy City, but had to work for it in the final laps thanks to a closing Kyle Larson. Lapped traffic didn’t give the No. 18 car an inch with a few laps to go, and it allowed Larson to close in to battle for the win. On the final lap, Larson attempted a slide job in Turn 2, only to put Busch in the wall. With Turn 3 quickly approaching, the former series champion sent Larson spinning, en route to the victory.
+While the two Kyles battled it out for the victory, it was familiar names rounding out the top five. Kevin Harvick, Martin Truex Jr. and Clint Bowyer, arguably the top five drivers in the Monster Energy NASCAR Cup Series this season, took home the top five spots. After having a great race from start to finish. Aric Almirola added his name to the mix by leading a career-high 70 laps yet finished 25th.
+LaJoie, who re-entered the race with a handful of laps to go after a fire engulfed his dashboard, gives his take on why lapped traffic crossed the line by not letting Busch by. He also discusses who he thinks can challenge the “Big Three” going forward.
+This weekend Fronstretch is holding a FanDuel contest for the Firecracker 400 at Daytona where the winner takes all. Ever want to visit the Tricky Triangle at Pocono Raceway and win hundreds of dollars in cash prizes? This is your chance. Jump in on the action at Fanduel.com/fromtstretch to have a shot at winning two tickets and two pit passes to the Gander Outdoors 400 at Pocono on July 29. You will be competing against many fantasy players, and quite possibly your favorite Frontstretch writer.
+For some it feels like the 2017 Cup season is just getting underway. For others it already feels like it’s been going on a very long time. (It’s 87 degrees outside as I write this Easter Sunday afternoon. It was 22 the day of the Daytona 500.) Mathematically, six races into a 36 race season we’re about 17% through (or there’s still 83 % of the season left to go for you “glass half-full types.) Below are some thoughts, ramblings and the usual vile pontificating about the season so far.
+
+ALTER TABLE Teacher CLUSTER BY (gender, country);
+
+-- After changing clustering columns
+DESC Teacher;
+|                col_namedata_typecomment|
+|                    name|   string|   NULL|
+|                  gender|   string|   NULL|
+|                 country|   string|   NULL|
+|                     age|      int|   NULL|
+|# Clustering Information|         |       |
+|              # col_namedata_typecomment|
+|                  gender|   string|   NULL|
+|                 country|   string|   NULL|
+
+ALTER TABLE Teacher CLUSTER BY NONE;
+
+-- After removing clustering columns
+DESC Teacher;
+|                col_namedata_typecomment|
+|                    name|   string|   NULL|
+|                  gender|   string|   NULL|
+|                 country|   string|   NULL|
+|                     age|      int|   NULL|
+|# Clustering Information|         |       |
+
+-- Change the fileformat
+ALTER TABLE loc_orc SET fileformat orc;
+
+ALTER TABLE p1 partition (month=2, day=2) SET fileformat parquet;
+
+-- Change the file Location
+ALTER TABLE dbx.tab1 PARTITION (a='1', b='2') SET LOCATION '/path/to/part/ways';
+
+-- SET SERDE/ SERDE Properties
+ALTER TABLE test_tab SET SERDE 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe';
+
+ALTER TABLE dbx.tab1 SET SERDE 'org.apache.hadoop' WITH SERDEPROPERTIES ('k' = 'v', 'kay' = 'vee');
+
+-- SET TABLE PROPERTIES
+ALTER TABLE dbx.tab1 SET TBLPROPERTIES ('winner' = 'loser');
+
+-- SET TABLE COMMENT Using SET PROPERTIES
+ALTER TABLE dbx.tab1 SET TBLPROPERTIES ('comment' = 'A table comment.');
+
+-- Alter TABLE COMMENT Using SET PROPERTIES
+ALTER TABLE dbx.tab1 SET TBLPROPERTIES ('comment' = 'This is a new comment.');
+
+-- DROP TABLE PROPERTIES
+ALTER TABLE dbx.tab1 UNSET TBLPROPERTIES ('winner');
+
+-- RECOVER PARTITIONS
+ALTER TABLE dbx.tab1 RECOVER PARTITIONS;
+``
+
+Related Statements
+
+* CREATE TABLE
+* DROP TABLE
+
+You can use TypeScript within Svelte components. IDE extensions like the Svelte VS Code extension will help you catch errors right in your editor, and `svelte-check` does the same on the command line, which you can integrate into your CI.
+
+`
+
+<button onclick={(e: Event) => greet(e.target.innerText)}>
+	{name as string}
+</button>
+
+Doing so allows you to use TypeScript's _type-only_ features. That is, all features that just disappear when transpiling to JavaScript, such as type annotations or interface declarations. Features that require the TypeScript compiler to output actual code are not supported. This includes:
+
+- using enums
+- using `private`, `protected` or `public` modifiers in constructor functions together with initializers
+- using features that are not yet part of the ECMAScript standard (i.e. not level 4 in the TC39 process) and therefore not implemented yet within Acorn, the parser we use for parsing JavaScript
+
+If you want to use one of these features, you need to setup up a `script` preprocessor.
+
+## Preprocessor setup
+
+To use non-type-only TypeScript features within Svelte components, you need to add a preprocessor that will turn TypeScript into JavaScript.
+
+### Using Vite
+
+If you're using SvelteKit, or Vite _without_ SvelteKit, you can use `vitePreprocess` from `@sveltejs/vite-plugin-svelte` in your config file:
+
+/// file: svelte.config.js
+// @noErrors
+
+const config = {
+	// Note the additional `{ script: true }`
+	preprocess: vitePreprocess({ script: true })
+};
+
+*This model was published in HF papers on 2020-05-22 and contributed to Hugging Face Transformers on 2020-11-16.*
+
+RAG
+
+Retrieval-Augmented Generation (RAG) combines a pretrained language model (parametric memory) with access to an external data source (non-parametric memory) by means of a pretrained neural retriever. RAG fetches relevant passages and conditions its generation on them during inference. This often makes the answers more factual and lets you update knowledge by changing the index instead of retraining the whole model.
+
+You can find all the original RAG checkpoints under the AI at Meta organization.
+
+> [!TIP]
+> This model was contributed by ola13.
+>
+> Click on the RAG models in the right sidebar for more examples of how to apply RAG to different language tasks.
+
+The examples below demonstrate how to generate text with [`AutoModel`].
+
+<hfoptions id="usage">
+<hfoption id="AutoModel">
+
+``python
+from transformers import RagRetriever, RagSequenceForGeneration, RagTokenizer
+
+tokenizer = RagTokenizer.from_pretrained("facebook/rag-sequence-nq")
+retriever = RagRetriever.from_pretrained(
+    "facebook/rag-sequence-nq", dataset="wiki_dpr", index_name="compressed"
+)
+
+model = RagSequenceForGeneration.from_pretrained(
+    "facebook/rag-sequence-nq",
+    retriever=retriever,
+    attn_implementation="flash_attention_2",
+    device_map="auto",
+)
+inputs = tokenizer("How many people live in Paris?", return_tensors="pt").to(model.device)
+generated = model.generate(input_ids=inputs["input_ids"])
+print(tokenizer.batch_decode(generated, skip_special_tokens=True)[0])
+``
+
+</hfoption>
+</hfoptions>
+
+Quantization reduces memory by storing weights in lower precision. See the Quantization overview for supported backends.
+The example below uses bitsandbytes to quantize the weights to 4-bits.
+
+``python
+
+from transformers import BitsAndBytesConfig, RagRetriever, RagSequenceForGeneration, RagTokenizer
+
+bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
+
+tokenizer = RagTokenizer.from_pretrained("facebook/rag-sequence-nq")
+retriever = RagRetriever.from_pretrained(
+    "facebook/rag-sequence-nq", dataset="wiki_dpr", index_name="compressed"
+)
+
+model = RagSequenceForGeneration.from_pretrained(
+    "facebook/rag-sequence-nq",
+    retriever=retriever,
+    quantization_config=bnb,
+    device_map="auto",
+)
+inputs = tokenizer("How many people live in Paris?", return_tensors="pt").to(model.device)
+generated = model.generate(input_ids=inputs["input_ids"])
+print(tokenizer.batch_decode(generated, skip_special_tokens=True)[0])
+``
+
+RagConfig
+
+[[autodoc]] RagConfig
+
+RagTokenizer
+
+[[autodoc]] RagTokenizer
+
+“Is it possible the king could have condescended so far as to express himself so favorably of me?” asked the enraptured Villefort.
+“I give you his very words; and if the marquis chooses to be candid, he will confess that they perfectly agree with what his majesty said to him, when he went six months ago to consult him upon the subject of your espousing his daughter.”
+“That is right,” cried the marquise. “I love to see you thus. Now, then, were a conspirator to fall into your hands, he would be most welcome.”
+“For my part, dear mother,” interposed Renée, “I trust your wishes will not prosper, and that Providence will only permit petty offenders, poor debtors, and miserable cheats to fall into M. de Villefort’s hands,—then I shall be contented.”
+“Just the same as though you prayed that a physician might only be called upon to prescribe for headaches, measles, and the stings of wasps, or any other slight affection of the epidermis. If you wish to see me the king’s attorney, you must desire for me some of those violent and dangerous diseases from the cure of which so much honor redounds to the physician.”
+At this moment, and as though the utterance of Villefort’s wish had sufficed to effect its accomplishment, a servant entered the room, and whispered a few words in his ear. Villefort immediately rose from table and quitted the room upon the plea of urgent business; he soon, however, returned, his whole face beaming with delight. Renée regarded him with fond affection; and certainly his handsome features, lit up as they then were with more than usual fire and animation, seemed formed to excite the innocent admiration with which she gazed on her graceful and intelligent lover.
+“You were wishing just now,” said Villefort, addressing her, “that I were a doctor instead of a lawyer. Well, I at least resemble the disciples of Esculapius in one thing [people spoke in this style in 1815], that of not being able to call a day my own, not even that of my betrothal.”
+“And wherefore were you called away just now?” asked Mademoiselle de Saint-Méran, with an air of deep interest.
+“‘The king’s attorney is informed by a friend to the throne and the religious institutions of his country, that one named Edmond Dantès, mate of the ship Pharaon, this day arrived from Smyrna, after having touched at Naples and Porto-Ferrajo, has been the bearer of a letter from Murat to the usurper, and again taken charge of another letter from the usurper to the Bonapartist club in Paris. Ample corroboration of this statement may be obtained by arresting the above-mentioned Edmond Dantès, who either carries the letter for Paris about with him, or has it at his father’s abode. Should it not be found in the possession of father or son, then it will assuredly be discovered in the cabin belonging to the said Dantès on board the Pharaon.’”
+“But,” said Renée, “this letter, which, after all, is but an anonymous scrawl, is not even addressed to you, but to the king’s attorney.”
+“True; but that gentleman being absent, his secretary, by his orders, opened his letters; thinking this one of importance, he sent for me, but not finding me, took upon himself to give the necessary orders for arresting the accused party.”
+“He is in safe custody,” answered Villefort; “and rely upon it, if the letter is found, he will not be likely to be trusted abroad again, unless he goes forth under the especial protection of the headsman.”
+“Come, come, my friend,” interrupted the marquise, “do not neglect your duty to linger with us. You are the king’s servant, and must go wherever that service calls you.”
+“Oh, Villefort!” cried Renée, clasping her hands, and looking towards her lover with piteous earnestness, “be merciful on this the day of our betrothal.”
+“To give you pleasure, my sweet Renée, I promise to show all the lenity in my power; but if the charges brought against this Bonapartist hero prove correct, why, then, you really must give me leave to order his head to be cut off.”
+“Never mind that foolish girl, Villefort,” said the marquise. “She will soon get over these things.” So saying, Madame de Saint-Méran extended her dry bony hand to Villefort, who, while imprinting a son-in-law’s respectful salute on it, looked at Renée, as much as to say, “I must try and fancy ’tis your dear hand I kiss, as it should have been.”
+“Upon my word, child!” exclaimed the angry marquise, “your folly exceeds all bounds. I should be glad to know what connection there can possibly be between your sickly sentimentality and the affairs of the state!”
+“Nay, madame, I pray you pardon this little traitor. I promise you that to make up for her want of loyalty, I will be most inflexibly severe;” then casting an expressive glance at his betrothed, which seemed to say, “Fear not, for your dear sake my justice shall be tempered with mercy,” and receiving a sweet and approving smile in return, Villefort departed with paradise in his heart.
+No sooner had Villefort left the salon, than he assumed the grave air of a man who holds the balance of life and death in his hands. Now, in spite of the nobility of his countenance, the command of which, like a finished actor, he had carefully studied before the glass, it was by no means easy for him to assume an air of judicial severity. Except the recollection of the line of politics his father had adopted, and which might interfere, unless he acted with the greatest prudence, with his own career, Gérard de Villefort was as happy as a man could be. Already rich, he held a high official situation, though only twenty-seven. He was about to marry a young and charming woman, whom he loved, not passionately, but reasonably, as became a deputy attorney of the king; and besides her personal attractions, which were very great, Mademoiselle de Saint-Méran’s family possessed considerable political influence, which they would, of course, exert in his favor. The dowry of his wife amounted to fifty thousand crowns, and he had, besides, the prospect of seeing her fortune increased to half a million at her father’s death. These considerations naturally gave Villefort a feeling of such complete felicity that his mind was fairly dazzled in its contemplation.
+
+У ІІІ Універсалі Української Центральної Ради йшлося, що УНР не відділяється від "Російської республіки". Однак ця теза не стосувалася радянської Росії, якої на той момент ще не існувало. Українська Центральна Рада ніколи не визнавала ленінську Раду Народних Комісарів (далі - РНК) як законний уряд для всіх територій колишньої Російської імперії. Про ситуацію в Росії у ІІІ Універсалі зазначалося: "Центрального правительства нема, і по державі шириться безвластя, безлад і руїна".
+На момент проголошення УНР Рада Народних Комісарів була лише одним із урядів на території колишньої імперії, не мала пріоритету над іншими. Фактичний контроль РНК не поширювався на більшість територій УНР. Аж до проголошення незалежності 22 січня 1918 року Українська Центральна Рада вважала УНР частиною тільки тієї Росії, яку ще належало відновити за результатами Українських і Всеросійських Установчих зборів. Міф 3. Територія УНР не охоплювала Східної України. Там існувала окрема Донецько-Криворізька республіка. Цю територію більшовики приєднали до України пізніше.
+Зустріч Симона Петлюри на залізничному вокзалі у Фастові після того, як з міста витіснили більшовиків. 29 серпня 1919 р. Спростування. Межі УНР уперше встановили ІІІ Універсалом Української Центральної Ради: "до території належать землі, заселені у більшості українцями: Київщина, Поділля, Волинь, Чернігівщина, Полтавщина, Харківщина, Катеринославщина, Херсонщина, Таврія (без Криму). Остаточне визначення границь… що до прилечення частин Курщини, Холмщини, Вороніжчини і суміжних губерній та областей, де більшість населення українське, має бути встановлено по згоді організованої волі народу".
+Таким чином, сучасні східні області України входили до тогочасних Харківської і Катеринославської губерній, окрім південної і східної частини Луганщини, яка була у складі області Війська Донського. Територіальні вимоги, висловлені в Універсалі, базувалися на етнографічних і статистичних даних розселення українського народу в Російській імперії. Ленінське керівництво Росії визнавало такі межі України, але прагнуло повалити Центральну Раду і привести до влади власний уряд.
+Карта Української Народної Республіки 1918 року Народний Секретаріат - альтернативний уряд України, створений 30 грудня більшовиками в Харкові, - висував претензії на всю територію УНР. Донецько-Криворізьку республіку більшовики проголосили пізніше - 12 лютого 1918 року. Її керівники претендували на південні та східні регіони УНР. Це відбулося у час, коли українські та союзні австро-німецькі війська наступали, витісняючи більшовиків.
+Мета проголошення республіки полягала в тому, аби під приводом належності східних земель "іншій республіці" стримати наступ. 3 березня 1918 року радянська Росія підписала Берестейський договір із Німеччиною та її союзниками. Однією з його умов було виведення радянських військ з України та досягнення миру з УНР. Навесні 1918 року більшовики визнали, що Донецький басейн входить до складу України. Після того про Донецько-Криворізьку республіку не згадували. Фактично її уряд ніколи не контролював заявленої території, не був визнаний жодною державою, навіть радянською Росією. Міф 4.
+Народний Секретаріат - єдиний законний представник українського народу. Червоноармійці у Харкові, 1919 рік Спростування. 30 грудня 1917 року на Всеукраїнському з'їзді рад у Харкові створили більшовицький уряд України. Його назвали Народним Секретаріатом - на противагу Генеральному Секретаріату УНР. Наявність українського радянського уряду дала змогу більшовикам списувати агресію на внутрішній конфлікт між харківським Народним Секретаріатом і київським Генеральним Секретаріатом, тобто трактувати як "громадянську війну" в Україні.
+Народний Секретаріат виконував переважно репрезентативні функції, більшовицьке керівництво намагалося створити видимість незалежності радянського уряду в Україні. Невдовзі Народний Секретаріат оголосив про повалення УЦР і в односторонньому порядку запровадив в Україні декрети РНК Росії. У березні 1918 року на Другому Всеукраїнському з'їзді рад Україну проголошено незалежною від Росії радянською республікою, а Народний Секретаріат - реорганізовано: до його складу залучили більше українців, головою став Микола Скрипник.
+Більшовицькі військові загони, які не підпорядковувалися Народному Секретаріатові, але виступали від його імені, мали легітимізувати агресію більшовицької Росії проти УНР. Міф 5. УНР вигадали у німецькому Генштабі, щоб розколоти Росію. Німецька карта Української Народної Республіки. 1918 р. Спростування. На початок Лютневої революції 1917 року ще тривала Перша світова війна. Німеччина, яка перебувала в коаліції Центральних держав, була зацікавлена в тому, щоб ослабити країни Антанти та вивести Росію з війни.
+Берлін таємно фінансував у ворожих країнах організації та пресу, які виступали з пропагандою миру. Тимчасовий уряд Росії, сформований у Петрограді в березні 1917 року, заявив про вірність союзницьким зобов'язанням і намір вести війну "до переможного кінця". Однак Німеччина, щоб ліквідувати Східний фронт, намагалася підшукати в Росії сили, згодні на сепаратний мир. Ними стали російські більшовики на чолі з Володимиром Леніним. На відміну від більшовиків, Українська Центральна Рада протягом 1917 року підтримувала військові цілі Антанти.
+В інтерв'ю для французької преси представник УЦР Іван Маєвський заявляв: "Для нас не може бути й мови про сепаратний мир. Ми хочемо повернути землі, окуповані німцями. Ми маємо ще визволити Галичину, Буковину і частину України". Тільки критична ситуація під час війни УНР з більшовиками змусила український уряд відмовитися від орієнтації на Антанту і шукати підтримки з боку Німеччини та її союзників. Міф 6. 300 беззбройних юнаків - українських спартанців кинули проти більшовиків.
+Учасники театралізованої батально-історичної вистави "Бій під Крутами" біля меморіалу героям Крут на Чернігівщині. 2 лютого 2008 р. Спростування. З українського боку участь у бою брали чотири сотні 1-ї Київської юнацької школи імені Богдана Хмельницького та 1-ша сотня Студентського куреня Січових Стрільців (разом понад 500 вояків і 20 старшин). На озброєнні вони мали гвинтівки, 16 кулеметів і саморобний бронепоїзд - звичайна артилерійська гармата, встановлена на залізничній платформі. Головною силою на полі бою були вихованці військових шкіл під командою досвідчених старшин.
+
+Reviewer Mordaunt Hall of The New York Times wrote of the singing, "...one wishes there was more of it and less of the somewhat futile attempt at a story" and noted that Bill Robinson "...gives an excellent exhibition of tap dancing, which won a genuine round of applause" and concluded, "The early glimpses of the circus theatre ... lead one to expect more than one is apt to get out of this production."
+The film reunited the director and most of the cast of RKO's most successful film of the year before, Rio Rita, but lackluster performances and direction, as well as a glut of movie musicals led to the film being one of RKO's biggest disappointments of 1930. The film lost an estimated $300,000.
+The men's coxed four was one of the competitions in the Rowing at the 1900 Summer Olympics events in Paris. The competition was plagued by controversy involving which boats should advance to the final. In one of the most unusual decisions in Olympic history, two separate finals were held for the event, each of which is still considered an Olympic championship by the International Olympic Committee. The crews of all six boats to compete in the two finals are Olympic medallists.
+The coxed four event was held from 25 to 26 August 1900. Ten boats, involving fifty-one rowers from four nations, competed. The first final, featuring the three fastest losers from the semifinals, was won by a crew from the Cercle de l'Aviron Roubaix club of France, with another French crew (Club Nautique de Lyon) coming second and German team Favorite Hammonia third. The second final, featuring the semifinal winners, was won by Der Hamburger und Germania Ruder Club of Germany, with Dutch side Minerva Amsterdam finishing second and German crew Ludwigshafener Ruderverein third.
+This was the first appearance of the event. Rowing had been on the programme in 1896 but was cancelled due to bad weather. The coxed four was one of the four initial events introduced in 1900. It was not held in 1904 or 1908, but was held at every Games from 1912 to 1992 when it (along with the men's coxed pair) was replaced with the men's lightweight double sculls and men's lightweight coxless four.
+The coxed four event featured five-person boats, with four rowers and a coxswain. It was a sweep rowing event, with the rowers each having one oar (and thus each rowing on one side). The tournament featured two rounds: semifinals and a final. There were three semifinals, each with three or four boats.
+The original format provided for the three semifinal winners, plus the second-place boat in the third semifinal (with four competitors), advancing to the final. In other words, the last two boats in each semifinal would be eliminated.
+After the runner-up in the second semifinal and the third-place boat in the third semifinal (who should have been eliminated) each had faster times than the winner of the first semifinal, the officials decided to hold another qualifying race. However, as the officials could not contact all of the teams involved, this race was scratched.
+The officials later decided to have a six-boat final, with the semifinal winners and the three fastest losers competing, despite the fact that the course had been designed for a maximum of four boats. As this decision was clearly preposterous, the semifinal winners boycotted the final in protest.
+Initially, the top boat in each semifinal plus the runner-up in the third semifinal (which had four boats instead of the three boats competing in each of the other two), were to advance. Following protests which ensued after the runner-up in the second semifinal and the third-place boat in the third semifinal each posted better times than the winner of the first, the qualification rules for the final were altered. Eventually, the six boats were broken into two groups and competed in separate finals. The runners-up in semifinals 2 and 3 as well as the third-place boat in semifinal 3 competed in the first final, while the three semifinal winners competed in the second.
+The Battle of Heliopolis or Ayn Shams was a decisive battle between Arab Muslim armies and Byzantine forces for the control of Egypt. Though there were several major skirmishes after this battle, it effectively decided the fate of the Byzantine rule in Egypt, and opened the door for the Muslim conquest of the Byzantine Exarchate of Africa.
+At the time of the death of Muhammad on 8 June 632, Islam had effectively unified the entire Arabian peninsula. Within the next twelve years, under the rule of the first two Caliphs an Islamic empire arose that annexed all of what used to be the Sassanid Empire, and most of the eastern provinces of the Byzantine Empire. The Muslim Caliphate continued to expand until by the turn of the 8th-century, it stretched from the Atlantic Ocean in the west to Central Asia in the east.
+Under the first Caliph, Abu Bakr, force was used to prevent unrest and rebellion from causing the collapse of the new Islamic state, and the first raids were carried out into the territory of the Sassanid Empire. But the all-out attack on the neighboring empires came with the ascension of the second Caliph, Umar. When the new Caliph began his rule in 634, the international situation in the Middle East could hardly have been more propitious for a new and ambitious power: the region's two traditional main powers, the Byzantine and the Sassanid Empires, had exhausted each other in a conflict that raged for over 20 years. By the 630s, Sassanid Persia had descended into a state of civil war, while Byzantium, under the aging emperor Heraclius, its manpower and resources depleted in the struggle with its old adversary, was struggling to re-establish its authority in its newly re-conquered eastern provinces. The two states were thus in considerable internal turmoil, and unable to either stop the Muslim expansion or to recover from its first blows. It is unknown whether Umar intended from the outset to conquer both the Sassanid and the Byzantine Empire, or simply allowed raids, and then, perceiving their weakness, followed up with full-scale invasion.
+
+        #: A data structure of functions to call to modify the keyword
+        #: arguments passed to the view function, in the format
+        #: ``{scope: [functions]}``. The ``scope`` key is the name of a
+        #: blueprint the functions are active for, or ``None`` for all
+        #: requests.
+        #:
+        #: To register a function, use the
+        #: :meth:`url_value_preprocessor` decorator.
+        #:
+        #: This data structure is internal. It should not be modified
+        #: directly and its format may change at any time.
+        self.url_value_preprocessors: dict[
+            ft.AppOrBlueprintKey,
+            list[ft.URLValuePreprocessorCallable],
+        ] = defaultdict(list)
+
+        #: A data structure of functions to call to modify the keyword
+        #: arguments when generating URLs, in the format
+        #: ``{scope: [functions]}``. The ``scope`` key is the name of a
+        #: blueprint the functions are active for, or ``None`` for all
+        #: requests.
+        #:
+        #: To register a function, use the :meth:`url_defaults`
+        #: decorator.
+        #:
+        #: This data structure is internal. It should not be modified
+        #: directly and its format may change at any time.
+        self.url_default_functions: dict[
+            ft.AppOrBlueprintKey, list[ft.URLDefaultCallable]
+        ] = defaultdict(list)
+
+    def __repr__(self) -> str:
+        return f"<{type(self).__name__} {self.name!r}>"
+
+    def _check_setup_finished(self, f_name: str) -> None:
+        raise NotImplementedError
+
+    @property
+    def static_folder(self) -> str | None:
+        """The absolute path to the configured static folder. ``None``
+        if no static folder is set.
+        """
+        if self._static_folder is not None:
+            return os.path.join(self.root_path, self._static_folder)
+        else:
+            return None
+
+    @static_folder.setter
+    def static_folder(self, value: str | os.PathLike[str] | None) -> None:
+        if value is not None:
+            value = os.fspath(value).rstrip(r"\/")
+
+        self._static_folder = value
+
+    @property
+    def has_static_folder(self) -> bool:
+        """``True`` if :attr:`static_folder` is set.
+
+        .. versionadded:: 0.5
+        """
+        return self.static_folder is not None
+
+    @property
+    def static_url_path(self) -> str | None:
+        """The URL prefix that the static route will be accessible from.
+
+        If it was not configured during init, it is derived from
+        :attr:`static_folder`.
+        """
+        if self._static_url_path is not None:
+            return self._static_url_path
+
+        if self.static_folder is not None:
+            basename = os.path.basename(self.static_folder)
+            return f"/{basename}".rstrip("/")
+
+        return None
+
+    @static_url_path.setter
+    def static_url_path(self, value: str | None) -> None:
+        if value is not None:
+            value = value.rstrip("/")
+
+        self._static_url_path = value
+
+    @cached_property
+    def jinja_loader(self) -> BaseLoader | None:
+        """The Jinja loader for this object's templates. By default this
+        is a class :class:`jinja2.loaders.FileSystemLoader` to
+        :attr:`template_folder` if it is set.
+
+        .. versionadded:: 0.5
+        """
+        if self.template_folder is not None:
+            return FileSystemLoader(os.path.join(self.root_path, self.template_folder))
+        else:
+            return None
+
+    def _method_route(
+        self,
+        method: str,
+        rule: str,
+        options: dict[str, t.Any],
+    ) -> t.Callable[[T_route], T_route]:
+        if "methods" in options:
+            raise TypeError("Use the 'route' decorator to use the 'methods' argument.")
+
+        return self.route(rule, methods=[method], **options)
+
+    @setupmethod
+    def get(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Shortcut for :meth:`route` with ``methods=["GET"]``.
+
+        .. versionadded:: 2.0
+        """
+        return self._method_route("GET", rule, options)
+
+    @setupmethod
+    def query(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Shortcut for :meth:`route` with ``methods=["QUERY"]``.
+
+        .. versionadded:: 3.2
+        """
+        return self._method_route("QUERY", rule, options)
+
+    @setupmethod
+    def post(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Shortcut for :meth:`route` with ``methods=["POST"]``.
+
+        .. versionadded:: 2.0
+        """
+        return self._method_route("POST", rule, options)
+
+    @setupmethod
+    def put(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Shortcut for :meth:`route` with ``methods=["PUT"]``.
+
+        .. versionadded:: 2.0
+        """
+        return self._method_route("PUT", rule, options)
+
+    @setupmethod
+    def delete(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Shortcut for :meth:`route` with ``methods=["DELETE"]``.
+
+        .. versionadded:: 2.0
+        """
+        return self._method_route("DELETE", rule, options)
+
+    @setupmethod
+    def patch(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Shortcut for :meth:`route` with ``methods=["PATCH"]``.
+
+        .. versionadded:: 2.0
+        """
+        return self._method_route("PATCH", rule, options)
+
+    @setupmethod
+    def route(self, rule: str, **options: t.Any) -> t.Callable[[T_route], T_route]:
+        """Decorate a view function to register it with the given URL
+        rule and options. Calls :meth:`add_url_rule`, which has more
+        details about the implementation.
+
+        .. code-block:: python
+
+            @app.route("/")
+            def index():
+                return "Hello, World!"
+
+        See :ref:`url-route-registrations`.
+
+        The endpoint name for the route defaults to the name of the view
+        function if the ``endpoint`` parameter isn't passed.
+
+        The ``methods`` parameter defaults to ``["GET"]``. ``HEAD`` and
+        ``OPTIONS`` are added automatically.
+
+Вечірні новини 🔹 Володимир Зеленськийвручивнизці громадян державні відзнаки з нагоди Міжнародного дня волонтера 🔹 У Дніпрівідкрилионовлений пам’ятник жертвам Голодомору 🔹 У зоні ООС другий день поспільзберігається «тиша»🔹 Міноборони Білорусівручилоноту протесту військовому аташе України 🔹 Тисячі людейпротестуютьу Брюсселі проти COVID-обмежень 🔹 Дощ, мокрий сніг та ожеледиця — синоптики далипрогнозна початок тижня
+
+But you forgot the most important question: who would in a fight: the Enterprise or a Star Destroyer?
+
+My money's on the Enterprise due to a more competent crew.
+
+my dog loves these
+These are healthy and my mixed Llasa, Tibetan Terrier adores them. And they are healthy and his breath doesn't smell and his teeth are in good shape because of such products. A great healthy product.
+
+Українавідповість білорусі у разі нових атак з її територ ії, — секретар РНБО Олексій Данілов в інтерв'ю "Настоящєму врємєні". “Ми розуміємо, що путін щодня тисне на лукашенка, щоб той розпочав збройну агресію з боку блорусі. Нам все відомо. Навіть нещодавня зустріч у Сочі була на цю тему. Але якщо з боку білорусі будуть йти війська, як це було 24 лютого, вони отримають таку відповідь, на яку не розраховували”, — заявив Данілов.
+
+Музика в Україні У нас, на жаль, культура бендкемпу слабо розвинена.Більшість гуртів взагалі не знають за існування цього сервісу (а це ще одна безкоштовна платформа для публікації своєї творчості).Колись, до речі, можна було купувати музику на Google Play (якщо не помиляюсь), але якість звуку сама платформа дещо шакалила.А тут можна прям вавку придбати — кайф.
+
+semordnilap в українській
+в англійському вікісловникові є таке слово: semordnilap, що значить "слово, словосполучення, речення, що формує інше слово, словосполучення, речення, якщо читати ззаду-наперед. наприклад: top ↔ pot, live ↔ evil, desserts ↔ stressed
+тут ще багато прикладів: https://listcaboodle.com/semordnilap-definition-list-of-examples-fun-facts/.
+в український не можу знайти такого поняття. найближче це анаграма, що охоплює ширшу множину слів. гадаю можна запозичити метод формування слова і назвати морднілап. такі у нас є приклади:
+
+так ↔ кат
+прес ↔ серп
+удар ↔ раду
+вид ↔ див
+
+збираю такі приклади, але не можу згадати чи знайти слова більш ніж 4 букви.
+поділіться, будь ласка, своїми знахідками особливо якщо слова довші ніж 4 букви.
+
+5pm Rescission Deadline Someone did a different post of an admin role w/ DEA being rescinded
+
+Ранкові новини 🔹 В Україні – 8 655нових випадківкоронавірусу 🔹 Вісім областей та Київпереходятьу «жовту» зону 🔹 COVID-щепленняможна робитичерез 28 днів після хвороби 🔹 ЄСПЛзаборонивповертати до Білорусі мігрантів, які потрапили на територію Польщі 🔹 Пентагонзавершив будівництвоновітнього радара великої дальності на Алясці
+
+Щоб Ви порадили собі у 2025?
+
+Beautiful!
+Tried this on today at my local retailer and had to have it. it is so comfortable and flattering. it's too bad the picture online has the model tucking it into the skirt because you can't see the ruching across the front. a little dressier alternative to a plain tee and reasonably priced for retailer. 5'8"" and i generally wear a 6, the small fit well. will probably be back for the black!
+
+У Києві розпочала роботу Новорічна поштова резиденція. Усі охочі можуть надіслати листи, які передаватимуть чарівнику, щоб той здійснив найзаповітніші мрії — повідомляють на сторінці резиденції. Листи можна надіслати за адресою: місто Київ, вул. Хрещатик, 22, 01001 Кому: Новорічному чарівнику ✨
+
+The menu described the item as "collard mustard greens"- I'm guessing a mixture of both, but it could just be straight greens given the pepper. Reo's is not the kind of place that concerns itself with the difference between collard and mustard greens.
+
+‘No plans’ for UK TikTok ban TikTok was definitely banned because of US social media companies lobbying the politicians to ban it. Thankfully, corporate paying lobbying is illegal in the UK.
+
+Спроби рфмобілізувати та відправити на війну проти Украї ни жителів невизнаного «Придністров’я» провалились, заявив речник Одеської ОВА Сергій Братчук. За його словами, люди почали втікати на західну територію Молдови і навіть намагались виїхати до Одеської області.
+
+корисне з чатом gpt чи gemini Я попросила чатик GPT ознайомитися з КПТ та психоаналізом і уявити що він психолог і поговорити зі мною спираючись на ці знання. Було файно, стільки підтримки та добрих слів, які підходять саме мені я не отримувала від психотерапевта-людини. Але я не вважаю це справжньою терапією і не раджу заміщати цим людину психолога.Але я як людина, яка поміняла вже не одного психолога, розумію як важко знайти "того самого". Також коли отримую результати аналізів лабораторних, то скидаю файл чатику і прошу проаналізувати і сказати свій вердикт. Але кожного разу йду до лікаря з ними на консультацію. Тут головне розуміти, що це зручний інструмент, який може щось пояснити доступною мовою але не замінить спеціаліста лікаря.Ще люблю з ним книги обговорювати)
+
+YUMMY
+A great healthy chew for my 9 wk old beagle, Rio. He loves the taste and it sure beats my arm.
+
+Війна в Україні, ядерна загроза, членство у ЄС... Що сказав Володимир Зеленський в інтерв'ю французьким журналістам.
+
+Мем Є підозри ідіть до спеціаліста, а не ставте діагноз
+
+Трамп в 2028: України не маючи жодних карт здійснила атаку на сарай в полі, таким чином ледь не вбивши мого друга, який мене дуже поважає, Владіміра. Саме тому ми вводимо санкції проти агресора зеленського та його держави
+
+The preserve was sold big time to the public, the only version available to the public before the ballot was the version with the preserve. Yes it was deleted from the ballot language, but that is a pull the wool over the eyes trick that gives Metro the excuse to not be accountable. But they and the zoo are accountable for their statements -- which were unequivacally that there would be an offiste preserve for the elephants.  This just proves that we cannot trust our government to tell the truth. But we still need to hold them accountable for their statements to the public.  And since there was so much public outcry about the preserve, Metro did option land, did hold hearings to discuss the plans for the preserve and did target in 2008 $12 million for captital expenses and a feasibility study. So why claim it was never part of the bond? Because all the money was spent on the new exhibit? Or it was a ruse to fool the public about their real intentions to never provide a preserve.
+
+— Так, — прогнівали ми Господа милосердного, не потішив він старости нашої ледачої! Так і в домовину ляжемо, а нікому буде за нами щиро поплакати, нікому буде й душі наші грішнії помянути!
+— Знаєш, Якиме, що? Поїду я завтра до Буртів та відвезу панотцеві Николі на сорокоуст і за твою, і за свою душу, — нехай одправить, як помремо.
+— Завжди ти наговориш такого, що й не слухав би тебе! Ну, скажи ж таки, розумна ти голово, хто ж живий за свою душу сорокоусти править?
+— Ні, Якиме не за живу душу, а за усопшу; маю це на думці зробити, щоб потім нам без помину не зостатися.
+І не перекажеш того, як стара Марта та Яким зраділи, побачивши під перелазом загорнену в сіру свитку дитину, з голівкою, прикритою зеленим широким лопухом!
+У хаті Яким обережно поклав дитину на стіл, дістав з полиці псалтир (він був грамотний), тричі перехристився й прочитав псалом: "Живий в помощі Вишняго". Потім узяв дитинку на руки і, передаючи її Марті, сказав:
+Принісши молока, Марта заходилася годувати дитину, а Яким вийшов на двір, знайшов у повітці ночви й почав ладнати до них вервечки. За півгодини, надиво Марті, приніс він у хату готову колиску. Решту дня минула їм непомітно. Надвечір, коли дитина заснула в своїй колисці, Марта, забувши, що це неділя, дістала з бодні тонкого полотна й заходилася кроїти маленькі сорочечки.
+— "А коли ми перехристилися, так вона щезла; мабуть то була нечиста сила й запалася в могилу", — так скінчила оповідати Марина, дівка небоязка.
+Другого дня ще до схід сонця, Яким запряг до брички пару добрих коней, помостив бричку сіном, застелив килимом і поїхав до села Буртів за пан-отцем Нилом.
+Їдучи повз могилу, він помітив у ранішньому тумані на могилі молодицю. Стояла вона лицем до Якимового хутора. Він глянув на неї, спинив коні й голосно гукнув:
+В обід Яким вернувся на хутір із пан-отцем Нилом та з отцем дияконом. Спочивши трохи під хатою та освіжившись "закрепленим" березовим соком, пан-отець Нил увійшов до хати. Спершу він прочитав молитву над дитям, нарік його Марком, а потім із отцем дияконом одправив обряд святого хрещення. Кумами були Яким та щаслива Марта. До самої суботи гостював пан-отець Нил із дияконом на хуторі в Якима, та й не тілько вони, а чимало таки добрих людей посходилося на Маркові христини.
+Минув місяць після христин Марочка (так звала його Марта), і на хуторі Якима Гирла нічого особливого не сталося; хіба тілько те, що скоро після христин чумаки прийшли з Дону, та це подія звичайна, хоч, правду кажучи, спостережлива голова й у цій звичайній події знайде собі чимало пожитку, як працьовита бджола на дрібненькій квітці. Особливо в перші дні варто послухати дозвільного чумака, як він, за чаркою горілки, почне розповідати, через які безкраї степи він переходив та з яких бездонних криниць воли напував; по скільки день він сам без хліба й без води пропадав; які міста бачив, які та на яких саме річках переправи мав, де та які він народи бачив, — аж волосся настовпужиться, як слухаєш. Та в Якима Гирла не було такого дозвільного чумака, а тому не було й балачок про мудровані чумацькі пригоди.
+Минав уже вересень і, линучи над хутором, своїм подихом красив зелений гай різними золотими та червоними барвами. Як глянеш іздалека на той гай, то здається, наче вкритий він дорогим різнобарвним килимом, особливо в час, як над ним сонце встає чи заходить. На могилі біля хутора, трохи не щоранку й щовечора, челядь бачила таємничу молодицю. Почали базікати, що це щось неспросту. А воно було дуже спросту: бідолашна ота молодиця була покритка, мати маленького Марочка. Не сила була їй, сердешній, одірватися від того місця, де росла її бідолашна, прекрасна дитина. Скільки разів вона вночі підходила до самого хутора, обходила його навкруги, пересижувала цілі ночі в рові, не заплющуючи очей. Або в неділю коли челядь ішла на село, вона нишком підкрадалася до самих воріт, щоб хоч голос своєї любої дитинки почути. Скільки разів поривалась вона ввійти до двору й випросити назад чи навіть украсти свою дитину, бо без дитини не можна було їй на світі жити, без неї хліб не ївся, вода не пилася, сонце Боже не світило й не гріло. Після того, як її зрадив отой улан-баламут, уся її любов, усе її ніжне почуття пониженої матері зосередилося на її сирітці-дитині. А воно, бідолашне, в чужих людей, на чужих руках засипає, чужі годують його груди, не знає воно материної любови, не знає сердечного материного поцілунку! Материна любов перемогла й страх, і сором: вона стала на тому, що — хоч би що — піде вона на хутір, — ждала тілько неділі, коли на хуторі людей буде менше.
+— А ще я думаю, Якиме, коли, дасть Бог, доживемо до Покрови, то поїдемо до церкви та запричастимо нашого Марочка, — тоді йому саме шість тижнів мине.
+— А там, я думаю, вже за одним разом розпитатись, чи не знайдемо доброї наймички, бо сам бачиш, — однієї наймички нам тепер мало.
+— Та коли б дав Бог таку, щоб і в господарстві таки тямила, тоді б я собі Марочка няньчила, а вона б по хазяйству поралась.
+Молодиця мовчки сіла на лаві біля порога й мовчки пильно дивилась на колиску й на Марту. Багато їй треба було душевної сили, щоб і знаку не подати, що вона найближча сонному Марочку душа.
+— Треба, голубочко, страх як треба! У нас тепер, Бог дав, мала дитина, так я все з нею няньчуся, а хазяйство зовсім занедбане.
+Наймичка підійшла до столу й подивилася на колиску; лице її змінилось, і дві великі сльозини покотилися по її змарнілих щоках. Яким помітив це й спитав:
+Бідолашна Лукіє! (Бо це ж була та сама щаслива, прекрасна цариця непорочного сільського свята). Бідолашна! Як одбився в твоєму серці голос твоєї милої єдиної дитини? Сердешна! Ти сама трохи не заридала й не заспівала разом із Якимом, але ти силою своєї любови спинила радісне зворушення й тілько тихими сльозами його вгамувала.
+— Цить, цить, моє серденько! Цур тобі з твоїм вовчим голосом, тілько мого Марочка перелякав... — Цить, моя пташечко, я тобі мізючка дам!
+— Чом же ти полуднувати не просиш? А коли хочеш яблук чи дуль, так сам піди до льоху та за одним заходом наточи й грушевого квасу, а я від дитини не відійду, доки воно не засне, сердешнеє. Ач, як його налякав: і досі ще в сердешного слізки на щічках. Годуйся, годуйся, моє серденько!
+
+Між тим, вже через п'ять років і «Дредноут», і його численні послідовники виявилися застарілими — їм на зміну прийшли «наддредноути» з їх 13,5" (343 мм) артилерією головного калібру, згодом збільшеною до 15" (381 мм) і навіть 16" (406 мм). Першими наддредноутами прийнято вважати британські лінкори типу «Оріон», які також мали посилене бронювання борту. За п'ять років між «Дредноутом» і «Оріоном» водотоннажність збільшилася на 25 %, а вага бортового залпу подвоїлася.
+Повною мірою врахувавши недоліки панцерних крейсерів «додредноутного» періоду, які були занадто слабкі для того, щоб на рівних бути включеними в лінійну ескадру, але при цьому занадто дорогі для безпосередньо крейсерства, Фішер паралельно з лінійним кораблем нового покоління виробив і тип відповідного йому «ескадреного», лінійного крейсера: у часи проекту «Антейкебл» він називався «Анепроучібл», згодом ці роботи вилилися у спірний тип «Інвінсібл», головний корабель якого знайшов свій кінець в Ютландському бою.
+Факт побудови в Англії першого у світі паротурбінного лінкора «Дредноут» поставив всі морські держави перед необхідністю в терміновому порядку приступити до проектування та побудови аналогічних кораблів для своїх військово-морських сил, оскільки всі побудовані раніше і ті, що перебувають в добудові ЛК (ескадрені панцерники) втратили своє бойове значення. Почалася чергова гонка в області морських озброєнь, спрямована на створення ЛК «дредноутного типу», яка в історії світового військового кораблебудування отримала загальне ім'я: «Дредноутна лихоманка». У цьому суперництві лідируючі місця відразу ж зайняли Англія і Німеччина, розглядаючи один одного в якості найбільш ймовірних противників… До 1900 року англійський флот за кількістю лінійних кораблів вдвічі перевершував німецький (39 проти 19). До 1900 року Англія дотримувалася правила: «мати чисельність флоту, рівну сумі флотів двох наступних за нею морських держав»… Після прийняття в 1900 році Німеччиною «Закону про флот», її виробничі потужності кораблебудування неухильно зростали і стали наближатися до англійських. Англія, вкрай стурбована стійким зростанням німецького флоту, зробила низку спроб укласти з Німеччиною угоду щодо забезпечення кількісного співвідношення англійських і німецьких лінійних кораблів (3 проти 2). Однак ці переговори, що тривали кілька років, були безрезультатними. У 1906 році Англія оголосила, що на закладку кожного нового німецького ЛК вона відповість закладкою двох ЛК дредноутного типу. В умовах, що склалися до проектування та побудови ЛК дредноутного типу були змушені приступити (напружуючи останні сили) всі європейські морські держави (в тому числі і Росія) з метою збереження свого впливу на морських театрах і зміцнення свого положення на світовій арені. Придбання дредноутів планували навіть Нідерланди та Греція. Однак, в умовах обмеженості своїх кораблебудівних ресурсів, ці держави, згідно з їх військово-морськими доктринами, запланували до закладки мінімально достатню кількість дредноутів, а у разі виникнення військової загрози розраховували на укладення воєнного союзу або з Англією, або з Німеччиною. При цьому військово-морські сили США перебували в особливих, найбільш вигідних умовах: відсутність явно вираженої погрози з боку якої-небудь з морських держав на тлі неухильного зростання кораблебудівних виробничих потужностей. У цих умовах США отримали унікальну можливість максимально використовувати досвід проектування зарубіжних дредноутів і резерв часу на проектування та будівництво своїх лінкорів.
+При проектуванні дредноутів спочатку виникли труднощі, пов'язані з розміщенням артилерійських башт головного калібру. З одного боку, прагнули забезпечити встановлення максимального числа гармат, які беруть участь у бортовому залпі, з іншого боку — як можна далі рознести башти і артилерійські погреби для забезпечення бойової живучості корабля. В зв'язку з цим на перших дредноутах застосовували різні варіанти розташування башт головного калібру: лінійно-ешелонована, лінійна, лінійно-ступінчаста. Від бортового розташування башт головного калібру, застосованого на першому ЛК «Дредноут», відмовилися у зв'язку з труднощами забезпечення захисту артилерійських погребів від підводних вибухів. Зокрема, на англійських ЛК типу «Кінг Джордж V», «Айрон Д'юк», на німецьких типу «Кеніг», французьких типу «Бретань», на італійських типу «Андреа Доріа» і на всіх американських дредноутах було застосовано лінійно-ступінчасте розташування башт головного калібру, в цілях посилення вогню прямо по носі і кормі. При цьому другі башти від носа і корми були встановлені на високі барбети. У подальшому, в зв'язку зі збільшенням калібру гармат (до 381-406-мм) — кількість башт головного калібру скоротилася до чотирьох і на всіх ЛК стали застосовувати виключно лінійно-ступінчасте розташування башт. У зв'язку із збільшенням живучості міноносців, обумовленим зростанням їх водотоннажності, а також у зв'язку зі збільшенням дальності дії торпед, виникла необхідність посилення протимінної артилерії. Замість 76-мм протимінних гармат, встановлених на першому «Дредноуті» відкрито на верхній палубі і на дахах башт головного калібру, стали застосовувати протимінну артилерію збільшеного калібру (102, 120, 130 і навіть 152-мм) з тенденцією розміщення цих гармат в броньованих казематах. Незабаром, з урахуванням росту ймовірності атак авіації противника, на дредноути почали встановлювати зенітні гармати калібром 76-88-мм. Спочатку при проектуванні дредноутів велике значення стали надавати забезпеченню бойової остійності. У всіх флотах було висунуто вимогу, щоб кораблі, які отримали бойові пошкодження і втратили запас плавучості, занурювалися на рівному кілі, не перевертаючись. У зв'язку з цим, а також з метою підвищення стійкості дредноутів при підводних вибухах, надводний борт по всій довжині захищався броньовим поясом, а корпус всередині раціонально поділявся на відсіки водонепроникними перебірками. На більшості перших дредноутів були встановлені котли зі змішаним і повністю нафтовим опаленням і паротурбінні двигуни, застосування яких, порівняно з паропоршневими машинами, забезпечувало: підвищення потужності на валу; підвищення швидкості повного ходу; підвищення економічності на високих швидкостях ходу; можливість обходитися меншим числом парових котлів; можливість більш низького розміщення паротурбінних машин в корпусі корабля, що забезпечувало більш надійний захист всієї енергетичної установки; більш плавний режим роботи при відсутності вібрацій; зниження небезпеки перебоїв у роботі енергетичної установки при хитавиці, коли гребні гвинти виходять з води. Паротурбінні двигуни в поєднанні з котлами, здатними працювати на змішаному вугільно-нафтовому і повністю нафтовому опаленні, забезпечили збільшення максимальної швидкості ходу дредноутів будівництва 1914—1918 рр. до 21-22 вузлів, а найбільш швидкохідні дредноути розвивали повний хід до 23-25 вузлів. Однак, на відміну від англійців, на перших німецьких дредноутах були встановлені паропоршневі двигуни, а паротурбінні двигуни були вперше встановлені на ЛК типу «Кайзер», які були спущені на воду в 1911—1912 рр. На перших американських дредноутах типу «Мічиган» і «Делавер» і на наступних «Техас» і «Оклахома» також були встановлені паропоршневі двигуни, а партурбінні двигуни американці вперше встановили на дредноутах «Арканзас» і «Невада». І тільки починаючи з дредноутів типу «Пенсильванія» (1915 р.) на американських дредноутах незмінно встановлювалися паротурбінні двигуни.

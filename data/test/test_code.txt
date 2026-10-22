@@ -1,0 +1,1962 @@
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Authenticate as @ohmyzsh
+        id: generate-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.OHMYZSH_CLIENT_ID }}
+          private-key: ${{ secrets.OHMYZSH_APP_PRIVATE_KEY }}
+      - name: Setup Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Process dependencies
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GIT_APP_NAME: ohmyzsh[bot]
+          GIT_APP_EMAIL: 54982679+ohmyzsh[bot]@users.noreply.github.com
+          TMP_DIR: ${{ runner.temp }}
+        run: |
+          pip install -r .github/workflows/dependencies/requirements.txt
+          python3 .github/workflows/dependencies/updater.py
+
+import * as commander from '../index.js';
+import { test, describe } from 'node:test';
+import assert from 'node:assert/strict';
+
+describe('Help.boxWrap()', () => {
+  test('when empty string then return empty string', () => {
+    const helper = new commander.Help();
+    const text = '';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, text);
+  });
+
+  test('when string contains unix line breaks then return (unix) empty lines', () => {
+    const helper = new commander.Help();
+    const text = '\n\n\n';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, text);
+  });
+
+  test('when string contains Windows line breaks then return (unix)) empty lines', () => {
+    const helper = new commander.Help();
+    const text = '\r\n\r\n\r\n';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, '\n\n\n');
+  });
+
+  test('when string contains only whitespace then returns empty string (trim right)', () => {
+    const helper = new commander.Help();
+    const text = ' \t  ';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, '');
+  });
+
+  test('when string contains leading whitespace then returns string with leading whitespace', () => {
+    const helper = new commander.Help();
+    const text = '  abc';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, '  abc');
+  });
+
+  test('when string contains intermediate whitespace then returns string with intermediate whitespace', () => {
+    const helper = new commander.Help();
+    const text = '123   456';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, '123   456');
+  });
+
+  test('when string contains trailing whitespace then returns string without trailing whitespace (trim right)', () => {
+    const helper = new commander.Help();
+    const text = '123   456   ';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, '123   456');
+  });
+
+  test('when string contains escape sequences then returns string with escape sequences', () => {
+    const helper = new commander.Help();
+    const text = '123   456   ';
+    const wrapped = helper.boxWrap(text, 50);
+    assert.equal(wrapped, '123   456');
+  });
+
+  test('when string has enough words to wrap then returns two wrapped lines', () => {
+    const helper = new commander.Help();
+    const text = '123 567 901 345 789 123 567 901 345 789 123 567 901';
+    const wrapped = helper.boxWrap(text, 45);
+    assert.equal(
+      wrapped,
+      '123 567 901 345 789 123 567 901 345 789 123\n567 901',
+    );
+  });
+
+  test('when string has enough words and escape sequences to wrap then returns wrapped line with break ignoring escape sequences', () => {
+    const helper = new commander.Help();
+    const CSI = '\u001b[';
+    const underlinedText = `${CSI}4mXYZ${CSI}24m`;
+    const text = `${underlinedText}${' ABC'.repeat(19)}`;
+    const wrapped = helper.boxWrap(text, 44);
+    assert.equal(
+      wrapped,
+      `${underlinedText} ${'ABC '.repeat(9)}ABC
+${'ABC '.repeat(8)}ABC`,
+    );
+  });
+
+  test('when first word longer than width then soft wrap', () => {
+    const helper = new commander.Help();
+    const text = 'abc'.repeat(20);
+    const wrapped = helper.boxWrap(text, 40);
+    assert.equal(wrapped, text);
+  });
+
+  test('when second word longer than width then wrap and soft wrap', () => {
+    const helper = new commander.Help();
+    const text = 'xyz ' + 'abc'.repeat(20);
+    const wrapped = helper.boxWrap(text, 40);
+    assert.equal(wrapped, `xyz\n${'abc'.repeat(20)}`);
+  });
+
+  test('when set width 41 then wrap at 41', () => {
+    const helper = new commander.Help();
+    const text = 'X'.repeat(39) + ' 1 2 3';
+    let wrapped = helper.boxWrap(text, 40);
+    assert.equal(wrapped, 'X'.repeat(39) + '\n1 2 3');
+    wrapped = helper.boxWrap(text, 41);
+    assert.equal(wrapped, 'X'.repeat(39) + ' 1\n2 3');
+  });
+
+  test('when set width 12 (too small) then skip wrap', () => {
+    const helper = new commander.Help();
+    const text = ' x'.repeat(8) + ' yy'.repeat(6);
+    let wrapped = helper.boxWrap(text, 14);
+    assert.equal(wrapped, text);
+  });
+
+  test('when set width 12 (and set minWrapWidth) then skip wrap', () => {
+    const helper = new commander.Help();
+    helper.minWidthToWrap = 1;
+    const text = ' x'.repeat(8) + ' yy'.repeat(6);
+    let wrapped = helper.boxWrap(text, 14);
+    assert.equal(wrapped, ' x x x x x x x\nx yy yy yy yy\nyy yy');
+  });
+});
+
+import assert from "assert";
+import {every} from "../src/index.js";
+
+it("every(values, test) returns true if all tests pass", () => {
+  assert.strictEqual(every([1, 2, 3, 2, 1], x => x & 1), false);
+  assert.strictEqual(every([1, 2, 3, 2, 1], x => x >= 1), true);
+});
+
+it("every(values, test) returns true if values is empty", () => {
+  assert.strictEqual(every([], () => false), true);
+});
+
+it("every(values, test) accepts an iterable", () => {
+  assert.strictEqual(every(new Set([1, 2, 3, 2, 1]), x => x >= 1), true);
+  assert.strictEqual(every((function*() { yield* [1, 2, 3, 2, 1]; })(), x => x >= 1), true);
+  assert.strictEqual(every(Uint8Array.of(1, 2, 3, 2, 1), x => x >= 1), true);
+});
+
+def hidden_prompt_func(prompt: str) -> str:
+    import getpass
+
+    return getpass.getpass(prompt)
+
+
+def _readline_prompt(func: t.Callable[[str], str], text: str, err: bool) -> str:
+    """Call a prompt function, passing the full prompt so readline can
+    handle line editing and cursor positioning correctly.
+
+    The prompt is handed to *func* (such as :func:`input`) rather than
+    written through :func:`echo`, so it has to strip ANSI color and style
+    codes itself when the destination stream does not support them. Without
+    this the prompt would keep codes that :func:`echo` removes from the
+    rest of the output.
+    """
+    stream = sys.stderr if err else sys.stdout
+
+    # Look up ``should_strip_ansi`` on the module so that ``CliRunner``,
+    # which patches it there during test isolation, is honored.
+    if _compat.should_strip_ansi(stream, resolve_color_default()):
+        text = strip_ansi(text)
+
+    if err:
+        with redirect_stdout(sys.stderr):
+            return func(text)
+    return func(text)
+
+
+def _build_prompt(
+    text: str,
+    suffix: str,
+    show_default: bool | str = False,
+    default: object | None = None,
+    show_choices: bool = True,
+    type: object | None = None,
+) -> str:
+    prompt = text
+    if type is not None and show_choices and isinstance(type, Choice):
+        prompt += f" ({', '.join(map(str, type.choices))})"
+    default_preview = ""
+    if show_default:
+        if isinstance(show_default, str):
+            default_preview = f" [({show_default})]"
+        elif default is not None:
+            default_preview = f" [{_format_default(default)}]"
+    return f"{prompt}{default_preview}{suffix}"
+
+
+def _format_default(default: V) -> V | str:
+    if isinstance(default, (io.IOBase, _LazyFile)):
+        name = getattr(default, "name", None)
+
+        if name is not None:
+            return str(name)
+
+    return default
+
+
+@t.overload
+def prompt(
+    text: str,
+    default: str | None = None,
+    hide_input: bool = False,
+    confirmation_prompt: bool | str = False,
+    type: None = None,
+    value_proc: None = None,
+    prompt_suffix: str = ": ",
+    show_default: bool | str = True,
+    err: bool = False,
+    show_choices: bool = True,
+) -> str: ...
+
+
+@t.overload
+def prompt(
+    text: str,
+    default: V | str | None = None,
+    hide_input: bool = False,
+    confirmation_prompt: bool | str = False,
+    type: ParamType[V, str] | type[V] | None = None,
+    value_proc: t.Callable[[str], V] | None = None,
+    prompt_suffix: str = ": ",
+    show_default: bool | str = True,
+    err: bool = False,
+    show_choices: bool = True,
+) -> V: ...
+
+
+def prompt(
+    text: str,
+    default: V | str | None = None,
+    hide_input: bool = False,
+    confirmation_prompt: bool | str = False,
+    type: ParamType[V, str] | type[V] | None = None,
+    value_proc: t.Callable[[str], V] | None = None,
+    prompt_suffix: str = ": ",
+    show_default: bool | str = True,
+    err: bool = False,
+    show_choices: bool = True,
+) -> V:
+    """Prompts a user for input.  This is a convenience function that can
+    be used to prompt a user for input later.
+
+    If the user aborts the input by sending an interrupt signal, this
+    function will catch it and raise a :exc:`Abort` exception.
+
+    :param text: the text to show for the prompt.
+    :param default: the default value to use if no input happens.  If this
+                    is not given it will prompt until it's aborted.
+    :param hide_input: if this is set to true then the input value will
+                       be hidden.
+    :param confirmation_prompt: Prompt a second time to confirm the
+        value. Can be set to a string instead of ``True`` to customize
+        the message.
+    :param type: the type to use to check the value against.
+    :param value_proc: if this parameter is provided it's a function that
+                       is invoked instead of the type conversion to
+                       convert a value.
+    :param prompt_suffix: a suffix that should be added to the prompt.
+    :param show_default: shows or hides the default value in the prompt.
+                         If this value is a string, it shows that string
+                         in parentheses instead of the actual value.
+    :param err: if set to true the file defaults to ``stderr`` instead of
+                ``stdout``, the same as with echo.
+    :param show_choices: Show or hide choices if the passed type is a Choice.
+                         For example if type is a Choice of either day or week,
+                         show_choices is true and text is "Group by" then the
+                         prompt will be "Group by (day, week): ".
+
+    .. versionchanged:: 8.5.0
+        Generically typed: the return type is narrowed by ``type``,
+        ``value_proc``, or ``default`` instead of being ``Any``. Runtime
+        behavior is unchanged.
+
+    .. versionchanged:: 8.3.3
+        ``show_default`` can be a string to show a custom value instead
+        of the actual default, matching the help text behavior.
+
+    .. versionchanged:: 8.3.1
+        A space is no longer appended to the prompt.
+
+    .. versionadded:: 8.0
+        ``confirmation_prompt`` can be a custom string.
+
+    .. versionadded:: 7.0
+        Added the ``show_choices`` parameter.
+
+    .. versionadded:: 6.0
+        Added unicode support for cmd.exe on Windows.
+
+    .. versionadded:: 4.0
+        Added the `err` parameter.
+
+    """
+
+    def prompt_func(text: str) -> str:
+        f = hidden_prompt_func if hide_input else visible_prompt_func
+        try:
+            return _readline_prompt(f, text, err)
+        except (KeyboardInterrupt, EOFError):
+            # getpass doesn't print a newline if the user aborts input with ^C.
+            # Allegedly this behavior is inherited from getpass(3).
+            # A doc bug has been filed at https://bugs.python.org/issue24711
+            if hide_input:
+                echo(None, err=err)
+            raise Abort() from None
+
+    if value_proc is None:
+        value_proc = convert_type(type, default)
+
+def progressbar(
+    iterable: cabc.Iterable[V] | None = None,
+    length: int | None = None,
+    label: str | None = None,
+    hidden: bool = False,
+    show_eta: bool = True,
+    show_percent: bool | None = None,
+    show_pos: bool = False,
+    item_show_func: t.Callable[[V | None], str | None] | None = None,
+    fill_char: str = "#",
+    empty_char: str = "-",
+    bar_template: str = "%(label)s  [%(bar)s]  %(info)s",
+    info_sep: str = "  ",
+    width: int = 36,
+    file: t.TextIO | None = None,
+    color: bool | None = None,
+    update_min_steps: int = 1,
+) -> ProgressBar[V]:
+    """This function creates an iterable context manager that can be used
+    to iterate over something while showing a progress bar.  It will
+    either iterate over the `iterable` or `length` items (that are counted
+    up).  While iteration happens, this function will print a rendered
+    progress bar to the given `file` (defaults to stdout) and will attempt
+    to calculate remaining time and more.  By default, this progress bar
+    will not be rendered if the file is not a terminal.
+
+    The context manager creates the progress bar.  When the context
+    manager is entered the progress bar is already created.  With every
+    iteration over the progress bar, the iterable passed to the bar is
+    advanced and the bar is updated.  When the context manager exits,
+    a newline is printed and the progress bar is finalized on screen.
+
+    Note: The progress bar is currently designed for use cases where the
+    total progress can be expected to take at least several seconds.
+    Because of this, the ProgressBar class object won't display
+    progress that is considered too fast, and progress where the time
+    between steps is less than a second.
+
+    No printing must happen or the progress bar will be unintentionally
+    destroyed.
+
+    Example usage::
+
+        with progressbar(items) as bar:
+            for item in bar:
+                do_something_with(item)
+
+    Alternatively, if no iterable is specified, one can manually update the
+    progress bar through the `update()` method instead of directly
+    iterating over the progress bar.  The update method accepts the number
+    of steps to increment the bar with::
+
+        with progressbar(length=chunks.total_bytes) as bar:
+            for chunk in chunks:
+                process_chunk(chunk)
+                bar.update(chunks.bytes)
+
+    The ``update()`` method also takes an optional value specifying the
+    ``current_item`` at the new position. This is useful when used
+    together with ``item_show_func`` to customize the output for each
+    manual step::
+
+        with click.progressbar(
+            length=total_size,
+            label='Unzipping archive',
+            item_show_func=lambda a: a.filename
+        ) as bar:
+            for archive in zip_file:
+                archive.extract()
+                bar.update(archive.size, archive)
+
+    :param iterable: an iterable to iterate over.  If not provided the length
+                     is required.
+    :param length: the number of items to iterate over.  By default the
+                   progressbar will attempt to ask the iterator about its
+                   length, which might or might not work.  If an iterable is
+                   also provided this parameter can be used to override the
+                   length.  If an iterable is not provided the progress bar
+                   will iterate over a range of that length.
+    :param label: the label to show next to the progress bar.
+    :param hidden: hide the progressbar. Defaults to ``False``. When no tty is
+        detected, it will only print the progressbar label. Setting this to
+        ``False`` also disables that.
+    :param show_eta: enables or disables the estimated time display.  This is
+                     automatically disabled if the length cannot be
+                     determined.
+    :param show_percent: enables or disables the percentage display.  The
+                         default is `True` if the iterable has a length or
+                         `False` if not.
+    :param show_pos: enables or disables the absolute position display.  The
+                     default is `False`.
+    :param item_show_func: A function called with the current item which
+        can return a string to show next to the progress bar. If the
+        function returns ``None`` nothing is shown. The current item can
+        be ``None``, such as when entering and exiting the bar.
+    :param fill_char: the character to use to show the filled part of the
+                      progress bar.
+    :param empty_char: the character to use to show the non-filled part of
+                       the progress bar.
+    :param bar_template: the format string to use as template for the bar.
+                         The parameters in it are ``label`` for the label,
+                         ``bar`` for the progress bar and ``info`` for the
+                         info section.
+    :param info_sep: the separator between multiple info items (eta etc.)
+    :param width: the width of the progress bar in characters, 0 means full
+                  terminal width
+    :param file: The file to write to. If this is not a terminal then
+        only the label is printed.
+    :param color: controls if the terminal supports ANSI colors or not.  The
+                  default is autodetection.  This is only needed if ANSI
+                  codes are included anywhere in the progress bar output
+                  which is not the case by default.
+    :param update_min_steps: Render only when this many updates have
+        completed. This allows tuning for very fast iterators.
+
+    .. versionadded:: 8.2
+        The ``hidden`` argument.
+
+    .. versionchanged:: 8.0
+        Output is shown even if execution time is less than 0.5 seconds.
+
+    .. versionchanged:: 8.0
+        ``item_show_func`` shows the current item, not the previous one.
+
+    .. versionchanged:: 8.0
+        Labels are echoed if the output is not a TTY. Reverts a change
+        in 7.0 that removed all output.
+
+def unstyle(text: str) -> str:
+    """Removes ANSI styling information from a string.  Usually it's not
+    necessary to use this function as Click's echo function will
+    automatically remove styling if necessary.
+
+    .. versionadded:: 2.0
+
+    :param text: the text to remove style information from.
+    """
+    return strip_ansi(text)
+
+
+def secho(
+    message: t.Any | None = None,
+    file: t.IO[t.AnyStr] | None = None,
+    nl: bool = True,
+    err: bool = False,
+    color: bool | None = None,
+    **styles: t.Any,
+) -> None:
+    """This function combines :func:`echo` and :func:`style` into one
+    call.  As such the following two calls are the same::
+
+        click.secho('Hello World!', fg='green')
+        click.echo(click.style('Hello World!', fg='green'))
+
+    All keyword arguments are forwarded to the underlying functions
+    depending on which one they go with.
+
+    Non-string types will be converted to :class:`str`. However,
+    :class:`bytes` are passed directly to :meth:`echo` without applying
+    style. If you want to style bytes that represent text, call
+    :meth:`bytes.decode` first.
+
+    .. versionchanged:: 8.0
+        A non-string ``message`` is converted to a string. Bytes are
+        passed through without style applied.
+
+    .. versionadded:: 2.0
+    """
+    if message is not None and not isinstance(message, (bytes, bytearray)):
+        message = style(message, **styles)
+
+    return echo(message, file=file, nl=nl, err=err, color=color)
+
+
+@t.overload
+def edit(
+    text: bytes | bytearray,
+    editor: str | None = None,
+    env: cabc.Mapping[str, str] | None = None,
+    require_save: bool = False,
+    extension: str = ".txt",
+) -> bytes | None: ...
+
+
+@t.overload
+def edit(
+    text: str,
+    editor: str | None = None,
+    env: cabc.Mapping[str, str] | None = None,
+    require_save: bool = True,
+    extension: str = ".txt",
+) -> str | None: ...
+
+
+@t.overload
+def edit(
+    text: None = None,
+    editor: str | None = None,
+    env: cabc.Mapping[str, str] | None = None,
+    require_save: bool = True,
+    extension: str = ".txt",
+    filename: str
+    | os.PathLike[str]
+    | cabc.Iterable[str | os.PathLike[str]]
+    | None = None,
+) -> None: ...
+
+
+def edit(
+    text: str | bytes | bytearray | None = None,
+    editor: str | None = None,
+    env: cabc.Mapping[str, str] | None = None,
+    require_save: bool = True,
+    extension: str = ".txt",
+    filename: str
+    | os.PathLike[str]
+    | cabc.Iterable[str | os.PathLike[str]]
+    | None = None,
+) -> str | bytes | bytearray | None:
+    r"""Edits the given text in the defined editor.  If an editor is given
+    (should be the full path to the executable but the regular operating
+    system search path is used for finding the executable) it overrides
+    the detected editor.  Optionally, some environment variables can be
+    used.  If the editor is closed without changes, `None` is returned.  In
+    case a file is edited directly the return value is always `None` and
+    `require_save` and `extension` are ignored.
+
+    If the editor cannot be opened a :exc:`UsageError` is raised.
+
+    Note for Windows: to simplify cross-platform usage, the newlines are
+    automatically converted from POSIX to Windows and vice versa.  As such,
+    the message here will have ``\n`` as newline markers.
+
+    .. warning::
+
+        The contract of this utility is that the editor command blocks until
+        the editing session is over: Click waits for it to exit before
+        reading the file back and cleaning it up. Editors whose command
+        launches the real editor in the background and exits immediately
+        break that contract. Click then returns before editing begins and
+        removes the temporary file while the editor still has it open. See
+        :ref:`edit-wait` to make such editors wait.
+
+    :param text: the text to edit.
+    :param editor: optionally the editor to use.  Defaults to automatic
+                   detection.
+    :param env: environment variables to forward to the editor.
+    :param require_save: if this is true, then not saving in the editor
+                         will make the return value become `None`.
+    :param extension: the extension to tell the editor about.  This defaults
+                      to `.txt` but changing this might change syntax
+                      highlighting.
+    :param filename: if provided it will edit this file instead of the
+                     provided text contents.  It will not use a temporary
+                     file as an indirection in that case. It accepts a path
+                     or any iterable of paths. If the editor supports
+                     editing multiple files at once, a sequence of files may
+                     be passed as well. Invoke `click.file` once per file
+                     instead if multiple files cannot be managed at once or
+                     editing the files serially is desired.
+
+    .. versionchanged:: 8.2.0
+        ``filename`` now accepts any ``Iterable[str]`` in addition to a ``str``
+        if the ``editor`` supports editing multiple files at once.
+
+    .. versionchanged:: 8.5.0
+        ``filename`` accepts ``os.PathLike`` values in addition to strings.
+
+    """
+    from ._termui_impl import Editor
+
+    ed = Editor(editor=editor, env=env, require_save=require_save, extension=extension)
+
+    if filename is None:
+        return ed.edit(text)
+
+    if isinstance(filename, (str, os.PathLike)):
+        filename = (filename,)
+
+    ed.edit_files(filenames=filename)
+    return None
+
+
+def launch(url: str, wait: bool = False, locate: bool = False) -> int:
+    """This function launches the given URL (or filename) in the default
+    viewer application for this file type.  If this is an executable, it
+    might launch the executable in a new session.  The return value is
+    the exit code of the launched application.  Usually, ``0`` indicates
+    success.
+
+    Examples::
+
+        click.launch('https://click.palletsprojects.com/')
+        click.launch('/my/downloaded/file', locate=True)
+
+    .. versionadded:: 2.0
+
+    :param url: URL or filename of the thing to launch.
+    :param wait: Wait for the program to exit before returning. This
+        only works if the launched program blocks. In particular,
+        ``xdg-open`` on Linux does not block.
+    :param locate: if this is set to `True` then instead of launching the
+                   application associated with the URL it will attempt to
+                   launch a file manager with the file located.  This
+                   might have weird effects if the URL does not point to
+                   the filesystem.
+    """
+    from ._termui_impl import open_url
+
+    return open_url(url, wait=wait, locate=locate)
+
+
+# If this is provided, getchar() calls into this instead.  This is used
+# for unittesting purposes.
+_getchar: t.Callable[[bool], str] | None = None
+
+
+def getchar(echo: bool = False) -> str:
+    """Fetches a single character from the terminal and returns it.  This
+    will always return a unicode character and under certain rare
+    circumstances this might return more than one character.  The
+    situations which more than one character is returned is when for
+    whatever reason multiple characters end up in the terminal buffer or
+    standard input was not actually a terminal.
+
+    Note that this will always read from the terminal, even if something
+    is piped into the standard input.
+
+    Note for Windows: in rare cases when typing non-ASCII characters, this
+    function might wait for a second character and then return both at once.
+    This is because certain Unicode characters look like special-key markers.
+
+    .. versionadded:: 2.0
+
+    :param echo: if set to `True`, the character read will also show up on
+                 the terminal.  The default is to not show it.
+    """
+    global _getchar
+
+    if _getchar is None:
+        from ._termui_impl import getchar as f
+
+        _getchar = f
+
+    return _getchar(echo)
+
+
+def raw_terminal() -> AbstractContextManager[int]:
+    from ._termui_impl import raw_terminal as f
+
+    return f()
+
+
+def pause(info: str | None = None, err: bool = False) -> None:
+    """This command stops execution and waits for the user to press any
+    key to continue.  This is similar to the Windows batch "pause"
+    command.  If the program is not run through a terminal, this command
+    will instead do nothing.
+
+    .. versionadded:: 2.0
+
+    .. versionadded:: 4.0
+       Added the `err` parameter.
+
+    :param info: The message to print before pausing. Defaults to
+        ``"Press any key to continue..."``.
+    :param err: if set to message goes to ``stderr`` instead of
+                ``stdout``, the same as with echo.
+    """
+    if not isatty(sys.stdin) or not isatty(sys.stdout):
+        return
+
+    if info is None:
+        info = _("Press any key to continue...")
+
+    try:
+        if info:
+            echo(info, nl=False, err=err)
+        try:
+            getchar()
+        except (KeyboardInterrupt, EOFError):
+            pass
+    finally:
+        if info:
+            echo(err=err)
+
+import { t } from '../localizedFormat/utils'
+
+export default (o, c, dayjs) => { // locale needed later
+  const proto = c.prototype
+  const getLocalePart = part => (part && (part.indexOf ? part : part.s))
+  const getShort = (ins, target, full, num, localeOrder) => {
+    const locale = ins.name ? ins : ins.$locale()
+    const targetLocale = getLocalePart(locale[target])
+    const fullLocale = getLocalePart(locale[full])
+    const result = targetLocale || fullLocale.map(f => f.slice(0, num))
+    if (!localeOrder) return result
+    const { weekStart } = locale
+    return result.map((_, index) => (result[(index + (weekStart || 0)) % 7]))
+  }
+  const getDayjsLocaleObject = () => dayjs.Ls[dayjs.locale()]
+  const getLongDateFormat = (l, format) =>
+    l.formats[format] || t(l.formats[format.toUpperCase()])
+
+  const localeData = function () {
+    return {
+      months: instance =>
+        (instance ? instance.format('MMMM') : getShort(this, 'months')),
+      monthsShort: instance =>
+        (instance ? instance.format('MMM') : getShort(this, 'monthsShort', 'months', 3)),
+      firstDayOfWeek: () => this.$locale().weekStart || 0,
+      weekdays: instance => (instance ? instance.format('dddd') : getShort(this, 'weekdays')),
+      weekdaysMin: instance =>
+        (instance ? instance.format('dd') : getShort(this, 'weekdaysMin', 'weekdays', 2)),
+      weekdaysShort: instance =>
+        (instance ? instance.format('ddd') : getShort(this, 'weekdaysShort', 'weekdays', 3)),
+      longDateFormat: format => getLongDateFormat(this.$locale(), format),
+      meridiem: this.$locale().meridiem,
+      ordinal: this.$locale().ordinal
+    }
+  }
+  proto.localeData = function () {
+    return localeData.bind(this)()
+  }
+
+  dayjs.localeData = () => {
+    const localeObject = getDayjsLocaleObject()
+    return {
+      firstDayOfWeek: () => localeObject.weekStart || 0,
+      weekdays: () => dayjs.weekdays(),
+      weekdaysShort: () => dayjs.weekdaysShort(),
+      weekdaysMin: () => dayjs.weekdaysMin(),
+      months: () => dayjs.months(),
+      monthsShort: () => dayjs.monthsShort(),
+      longDateFormat: format => getLongDateFormat(localeObject, format),
+      meridiem: localeObject.meridiem,
+      ordinal: localeObject.ordinal
+    }
+  }
+
+  dayjs.months = () => getShort(getDayjsLocaleObject(), 'months')
+
+  dayjs.monthsShort = () => getShort(getDayjsLocaleObject(), 'monthsShort', 'months', 3)
+
+  dayjs.weekdays = localeOrder => getShort(getDayjsLocaleObject(), 'weekdays', null, null, localeOrder)
+
+  dayjs.weekdaysShort = localeOrder => getShort(getDayjsLocaleObject(), 'weekdaysShort', 'weekdays', 3, localeOrder)
+
+  dayjs.weekdaysMin = localeOrder => getShort(getDayjsLocaleObject(), 'weekdaysMin', 'weekdays', 2, localeOrder)
+}
+
+# shellcheck shell=bash
+cite about-plugin
+about-plugin 'Initialization for fuck'
+url "https://github.com/nvbn/thefuck"
+
+# https://github.com/nvbn/thefuck
+
+if _command_exists thefuck; then
+	# shellcheck disable=SC2046
+	eval $(thefuck --alias)
+fi
+
+// Luxembourgish [lb]
+import dayjs from 'dayjs'
+
+const locale = {
+  name: 'lb',
+  weekdays: 'Sonndeg_Méindeg_Dënschdeg_Mëttwoch_Donneschdeg_Freideg_Samschdeg'.split('_'),
+  months: 'Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
+  weekStart: 1,
+  weekdaysShort: 'So._Mé._Dë._Më._Do._Fr._Sa.'.split('_'),
+  monthsShort: 'Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.'.split('_'),
+  weekdaysMin: 'So_Mé_Dë_Më_Do_Fr_Sa'.split('_'),
+  ordinal: n => n,
+  formats: {
+    LT: 'H:mm [Auer]',
+    LTS: 'H:mm:ss [Auer]',
+    L: 'DD.MM.YYYY',
+    LL: 'D. MMMM YYYY',
+    LLL: 'D. MMMM YYYY H:mm [Auer]',
+    LLLL: 'dddd, D. MMMM YYYY H:mm [Auer]'
+  }
+}
+
+dayjs.locale(locale, null, true)
+
+export default locale
+
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "ingress": {
+      "type": "object",
+      "form": true,
+      "title": "Ingress details",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "form": true,
+          "title": "Use a custom hostname",
+          "description": "Enable the ingress resource that allows you to access the NGINX installation."
+        },
+        "hostname": {
+          "type": "string",
+          "form": true,
+          "title": "Hostname",
+          "hidden": {
+            "value": false,
+            "path": "ingress/enabled"
+          }
+        }
+      }
+    },
+    "service": {
+      "type": "object",
+      "form": true,
+      "title": "Service Configuration",
+      "properties": {
+        "type": {
+          "type": "string",
+          "form": true,
+          "title": "Service Type",
+          "description": "Allowed values: \"ClusterIP\", \"NodePort\" and \"LoadBalancer\""
+        }
+      }
+    },
+    "replicaCount": {
+      "type": "integer",
+      "form": true,
+      "title": "Number of replicas",
+      "description": "Number of replicas to deploy"
+    },
+    "serverBlock": {
+      "type": "string",
+      "form": true,
+      "title": "Custom server block",
+      "description": "Custom server block to be added to NGINX configuration"
+    },
+    "streamServerBlock": {
+      "type": "string",
+      "form": true,
+      "title": "Custom stream server block",
+      "description": "Custom stream server block to be added to NGINX configuration"
+    },
+    "contextIncludes": {
+      "type": "object",
+      "form": true,
+      "title": "Context-based configuration includes",
+      "properties": {
+        "main": {
+          "type": "string",
+          "form": true,
+          "title": "Main context configuration",
+          "description": "Custom configuration for the main context"
+        },
+        "events": {
+          "type": "string",
+          "form": true,
+          "title": "Events context configuration",
+          "description": "Custom configuration for the events context"
+        },
+        "http": {
+          "type": "string",
+          "form": true,
+          "title": "HTTP context configuration",
+          "description": "Custom configuration for the http context"
+        }
+      }
+    },
+    "existingContextMainConfigmaps": {
+      "type": "array",
+      "form": true,
+      "title": "Existing main context ConfigMaps",
+      "description": "List of existing ConfigMaps with custom main context configuration",
+      "items": {
+        "type": "string"
+      }
+    },
+    "existingContextEventsConfigmaps": {
+      "type": "array",
+      "form": true,
+      "title": "Existing events context ConfigMaps",
+      "description": "List of existing ConfigMaps with custom events context configuration",
+      "items": {
+        "type": "string"
+      }
+    },
+    "existingContextHttpConfigmaps": {
+      "type": "array",
+      "form": true,
+      "title": "Existing HTTP context ConfigMaps",
+      "description": "List of existing ConfigMaps with custom http context configuration",
+      "items": {
+        "type": "string"
+      }
+    },
+    "containerSecurityContext": {
+      "type": "object",
+      "form": true,
+      "title": "NGINX containers' Security Context",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "form": true,
+          "title": "Enable Security Context",
+          "description": "Whether to enable NGINX containers' Security Context"
+        },
+        "runAsUser": {
+          "type": "integer",
+          "form": true,
+          "title": "ID of the user",
+          "description": "The UID of the user NGINX containers will run as"
+        }
+      }
+    },
+    "podSecurityContext": {
+      "type": "object",
+      "form": true,
+      "title": "NGINX pods' Security Context",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "form": true,
+          "title": "Enable Security Context",
+          "description": "Whether to enable NGINX pods' Security Context"
+        },
+        "fsGroup": {
+          "type": "integer",
+          "form": true,
+          "title": "ID of the group",
+          "description": "The GID of the group NGINX pods will run as"
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "form": true,
+      "title": "Prometheus metrics details",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "title": "Create Prometheus metrics exporter",
+          "description": "Create a side-car container to expose Prometheus metrics",
+          "form": true
+        },
+        "serviceMonitor": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "title": "Create Prometheus Operator ServiceMonitor",
+              "description": "Create a ServiceMonitor to track metrics using Prometheus Operator",
+              "form": true,
+              "hidden": {
+                "value": false,
+                "path": "metrics/enabled"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+# shellcheck shell=bash
+cite about-plugin
+about-plugin 'Load Software Development Kit Manager'
+url "https://sdkman.io/"
+
+# Use $SDKMAN_DIR if defined,
+# otherwise default to ~/.sdkman
+export SDKMAN_DIR=${SDKMAN_DIR:-$HOME/.sdkman}
+
+# shellcheck disable=SC1091
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
+# Set terminal window and tab/icon title
+#
+# usage: title short_tab_title [long_window_title]
+#
+# See: http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss3.1
+# Fully supports screen, iterm, and probably most modern xterm and rxvt
+# (In screen, only short_tab_title is used)
+# Limited support for Apple Terminal (Terminal can't set window and tab separately)
+function title {
+  setopt localoptions nopromptsubst
+
+  # Don't set the title if inside emacs, unless using vterm
+  [[ -n "${INSIDE_EMACS:-}" && "$INSIDE_EMACS" != vterm ]] && return
+
+  # if $2 is unset use $1 as default
+  # if it is set and empty, leave it as is
+  : ${2=$1}
+
+  case "$TERM" in
+    cygwin|xterm*|putty*|rxvt*|konsole*|ansi|mlterm*|alacritty*|st*|foot*|contour*|wezterm*)
+      print -Pn "\e]2;${2:q}\a" # set window name
+      print -Pn "\e]1;${1:q}\a" # set tab name
+      ;;
+    screen*|tmux*)
+      print -Pn "\e]2;${2:q}\e\\" # set tmux pane title
+      print -Pn "\ek${1:q}\e\\" # set screen hardstatus/tmux window name if `allow-rename` is on
+      ;;
+    *)
+      if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+        print -Pn "\e]2;${2:q}\a" # set window name
+        print -Pn "\e]1;${1:q}\a" # set tab name
+      else
+        # Try to use terminfo to set the title if the feature is available
+        if (( ${+terminfo[fsl]} && ${+terminfo[tsl]} )); then
+          # Emit the capabilities with echoti so terminfo does its own parameter
+          # substitution: some terminals (vt320) take a column argument, and
+          # running prompt expansion over the capability string mangles it.
+          echoti tsl 0
+          print -Pn "$1"
+          echoti fsl
+        fi
+      fi
+      ;;
+  esac
+}
+
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%15<..<%~%<<" #15 char left truncated PWD
+ZSH_THEME_TERM_TITLE_IDLE="%n@%m:%~"
+# Avoid duplication of directory in terminals with independent dir display
+if [[ "$TERM_PROGRAM" == Apple_Terminal ]]; then
+  ZSH_THEME_TERM_TITLE_IDLE="%n@%m"
+fi
+
+# Runs before showing the prompt
+function omz_termsupport_precmd {
+  [[ "${DISABLE_AUTO_TITLE:-}" != true ]] || return 0
+  title "$ZSH_THEME_TERM_TAB_TITLE_IDLE" "$ZSH_THEME_TERM_TITLE_IDLE"
+}
+
+# Runs before executing the command
+function omz_termsupport_preexec {
+  [[ "${DISABLE_AUTO_TITLE:-}" != true ]] || return 0
+
+  emulate -L zsh
+  setopt extended_glob
+
+  # split command into array of arguments
+  local -a cmdargs
+  cmdargs=("${(z)2}")
+  # if running fg, extract the command from the job description
+  if [[ "${cmdargs[1]}" = fg ]]; then
+    # get the job id from the first argument passed to the fg command
+    local job_id jobspec="${cmdargs[2]#%}"
+    # logic based on jobs arguments:
+    # http://zsh.sourceforge.net/Doc/Release/Jobs-_0026-Signals.html#Jobs
+    # https://www.zsh.org/mla/users/2007/msg00704.html
+    case "$jobspec" in
+      <->) # %number argument:
+        # use the same <number> passed as an argument
+        job_id=${jobspec} ;;
+      ""|%|+) # empty, %% or %+ argument:
+        # use the current job, which appears with a + in $jobstates:
+        # suspended:+:5071=suspended (tty output)
+        job_id=${(k)jobstates[(r)*:+:*]} ;;
+      -) # %- argument:
+        # use the previous job, which appears with a - in $jobstates:
+        # suspended:-:6493=suspended (signal)
+        job_id=${(k)jobstates[(r)*:-:*]} ;;
+      [?]*) # %?string argument:
+        # use $jobtexts to match for a job whose command *contains* <string>
+        job_id=${(k)jobtexts[(r)*${(Q)jobspec}*]} ;;
+      *) # %string argument:
+        # use $jobtexts to match for a job whose command *starts with* <string>
+        job_id=${(k)jobtexts[(r)${(Q)jobspec}*]} ;;
+    esac
+
+    # override preexec function arguments with job command
+    if [[ -n "${jobtexts[$job_id]}" ]]; then
+      1="${jobtexts[$job_id]}"
+      2="${jobtexts[$job_id]}"
+    fi
+  fi
+
+  # cmd name only, or if this is sudo or ssh, the next cmd
+  local CMD="${1[(wr)^(*=*|sudo|ssh|mosh|rake|-*)]:gs/%/%%}"
+  local LINE="${2:gs/%/%%}"
+
+  title "$CMD" "%100>...>${LINE}%<<"
+}
+
+autoload -Uz add-zsh-hook
+
+if [[ -z "$INSIDE_EMACS" || "$INSIDE_EMACS" = vterm ]]; then
+  add-zsh-hook precmd omz_termsupport_precmd
+  add-zsh-hook preexec omz_termsupport_preexec
+fi
+
+# Keep terminal emulator's current working directory correct,
+# even if the current working directory path contains symbolic links
+#
+# References:
+# - Apple's Terminal.app: https://superuser.com/a/315029
+# - iTerm2: https://iterm2.com/documentation-escape-codes.html (iTerm2 Extension / CurrentDir+RemoteHost)
+# - Konsole: https://bugs.kde.org/show_bug.cgi?id=327720#c1
+# - libvte (gnome-terminal, mate-terminal, …): https://bugzilla.gnome.org/show_bug.cgi?id=675987#c14
+#   Apparently it had a bug before ~2012 were it would display the unknown OSC 7 code
+#
+# As of May 2021 mlterm, PuTTY, rxvt, screen, termux & xterm simply ignore the unknown OSC.
+
+# Don't define the function if we're inside Emacs or in an SSH session (#11696)
+if [[ -n "$INSIDE_EMACS" || -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
+  return
+fi
+
+# Don't define the function if we're in an unsupported terminal
+case "$TERM" in
+  # all of these either process OSC 7 correctly or ignore entirely
+  xterm*|putty*|rxvt*|konsole*|mlterm*|alacritty*|screen*|tmux*) ;;
+  contour*|foot*) ;;
+  *)
+    # Terminal.app and iTerm2 process OSC 7 correctly
+    case "$TERM_PROGRAM" in
+      Apple_Terminal|iTerm.app) ;;
+      *) return ;;
+    esac ;;
+esac
+
+# Emits the control sequence to notify many terminal emulators
+# of the cwd
+#
+# Identifies the directory using a file: URI scheme, including
+# the host name to disambiguate local vs. remote paths.
+function omz_termsupport_cwd {
+  setopt localoptions unset
+  # Percent-encode the host and path names.
+  local URL_HOST URL_PATH
+  URL_HOST="$(omz_urlencode -P $HOST)" || return 1
+  URL_PATH="$(omz_urlencode -P $PWD)" || return 1
+
+        try {
+          await request({ url: `http://localhost:${server.address().port}` });
+        } finally {
+          server.close();
+        }
+      });
+    });
+
+    describe('7364', () => {
+      it('fetch: should have status code in axios error', async () => {
+        const isFetchSupported = typeof fetch === 'function';
+        if (!isFetchSupported) {
+          vi.skip();
+        }
+
+        const server = http
+          .createServer((req, res) => {
+            res.statusCode = 400;
+            res.end();
+          })
+          .listen(0);
+
+        const instance = axios.create({
+          baseURL: `http://localhost:${server.address().port}`,
+          adapter: 'fetch',
+        });
+
+        try {
+          await instance.get('/status/400');
+        } catch (error) {
+          assert.equal(error.name, 'AxiosError');
+          assert.equal(error.isAxiosError, true);
+          assert.equal(error.status, 400);
+        } finally {
+          server.close();
+        }
+      });
+
+      it('http: should have status code in axios error', async () => {
+        const server = http
+          .createServer((req, res) => {
+            res.statusCode = 400;
+            res.end();
+          })
+          .listen(0);
+
+        const instance = axios.create({
+          baseURL: `http://localhost:${server.address().port}`,
+          adapter: 'http',
+        });
+
+        try {
+          await instance.get('/status/400');
+        } catch (error) {
+          assert.equal(error.name, 'AxiosError');
+          assert.equal(error.isAxiosError, true);
+          assert.equal(error.status, 400);
+        } finally {
+          server.close();
+        }
+      });
+    });
+  });
+
+  // https://snyk.io/vuln/SNYK-JS-AXIOS-1038255
+  // https://github.com/axios/axios/issues/3407
+  // https://github.com/axios/axios/issues/3369
+  describe('SSRF SNYK-JS-AXIOS-1038255', () => {
+    let fail = false;
+    let proxy;
+    let server;
+    let location;
+    let evilPort;
+    let proxyPort;
+
+    beforeEach(() => {
+      fail = false;
+      server = http
+        .createServer((req, res) => {
+          fail = true;
+          res.end('rm -rf /');
+        })
+        .listen(0);
+      evilPort = server.address().port;
+
+      proxy = http
+        .createServer((req, res) => {
+          if (
+            new URL(req.url, 'http://' + req.headers.host).toString() ===
+            'http://localhost:' + evilPort + '/'
+          ) {
+            return res.end(
+              JSON.stringify({
+                msg: 'Protected',
+                headers: req.headers,
+              })
+            );
+          }
+          res.writeHead(302, { location });
+          res.end();
+        })
+        .listen(0);
+      proxyPort = proxy.address().port;
+      location = 'http://localhost:' + evilPort;
+    });
+
+    afterEach(() => {
+      server.close();
+      proxy.close();
+    });
+
+    it('obeys proxy settings when following redirects', async () => {
+      const response = await axios({
+        method: 'get',
+        url: 'http://www.google.com/',
+        proxy: {
+          host: 'localhost',
+          port: proxyPort,
+          auth: {
+            username: 'sam',
+            password: 'password',
+          },
+        },
+      });
+
+      assert.strictEqual(fail, false);
+      assert.strictEqual(response.data.msg, 'Protected');
+      assert.strictEqual(response.data.headers.host, 'localhost:' + evilPort);
+      assert.strictEqual(
+        response.data.headers['proxy-authorization'],
+        'Basic ' + Buffer.from('sam:password').toString('base64')
+      );
+
+      return response;
+    });
+  });
+
+  // https://security.snyk.io/vuln/SNYK-JS-AXIOS-7361793
+  // https://github.com/axios/axios/issues/6463
+  describe('SSRF SNYK-JS-AXIOS-7361793', () => {
+    let goodServer;
+    let badServer;
+    let goodPort;
+    let badPort;
+
+    beforeEach(() => {
+      goodServer = http
+        .createServer((req, res) => {
+          res.write('good');
+          res.end();
+        })
+        .listen(0);
+      goodPort = goodServer.address().port;
+
+      badServer = http
+        .createServer((req, res) => {
+          res.write('bad');
+          res.end();
+        })
+        .listen(0);
+      badPort = badServer.address().port;
+    });
+
+    afterEach(() => {
+      goodServer.close();
+      badServer.close();
+    });
+
+    it('should not fetch in server-side mode', async () => {
+      const ssrfAxios = axios.create({
+        baseURL: 'http://localhost:' + String(goodPort),
+      });
+
+      const userId = '/localhost:' + String(badPort);
+
+      try {
+        await ssrfAxios.get(`/${userId}`);
+      } catch (error) {
+        assert.ok(error.message.startsWith('Invalid URL'));
+        return;
+      }
+      assert.fail('Expected an error to be thrown');
+    });
+
+    describe('client-side mode', () => {
+      let savedHasBrowserEnv;
+      let savedOrigin;
+
+      beforeEach(() => {
+        assert.ok(platform.hasBrowserEnv !== undefined);
+        savedHasBrowserEnv = platform.hasBrowserEnv;
+        savedOrigin = platform.origin;
+        platform.hasBrowserEnv = true;
+        platform.origin = 'http://localhost:' + String(goodPort);
+      });
+
+      afterEach(() => {
+        platform.hasBrowserEnv = savedHasBrowserEnv;
+        platform.origin = savedOrigin;
+      });
+
+      it('resolves URL relative to origin and returns bad server body', async () => {
+        const ssrfAxios = axios.create({
+          baseURL: 'http://localhost:' + String(goodPort),
+        });
+
+        const userId = '/localhost:' + String(badPort);
+
+        const response = await ssrfAxios.get(`/${userId}`);
+        assert.strictEqual(response.data, 'bad');
+        assert.strictEqual(response.config.baseURL, 'http://localhost:' + String(goodPort));
+        assert.strictEqual(response.config.url, '//localhost:' + String(badPort));
+        assert.strictEqual(
+          response.request.res.responseUrl,
+          'http://localhost:' + String(badPort) + '/'
+        );
+      });
+    });
+  });
+});
+
+import moment from 'moment'
+import dayjs from '../../src'
+import relativeTime from '../../src/plugin/relativeTime'
+import '../../src/locale/he'
+
+dayjs.extend(relativeTime)
+
+it('RelativeTime: Time from X', () => {
+  const T = [
+    [44.4, 'second'], // a few seconds
+    [89.5, 'second'], // a minute
+    [2, 'minute'], // 2 minutes
+    [43, 'minute'], // 43 minutes
+    [45, 'minute'], // an hour
+    [3, 'hour'], // 3 hours
+    [21, 'hour'], // 21 hours
+    [1, 'day'], // a day
+    [3, 'day'], // 3 day
+    [25, 'day'], // 25 days
+    [1, 'month'], // a month
+    [2, 'month'], // 2 month
+    [10, 'month'], // 10 month
+    [1, 'year'], // a year
+    [2, 'year'], // 2 year
+    [5, 'year'], // 5 year
+    [18, 'month'] // 2 years
+  ]
+
+  T.forEach((t) => {
+    dayjs.locale('he')
+    moment.locale('he')
+
+    const dayjsDay = dayjs()
+    const momentDay = moment()
+
+    const dayjsCompare = dayjs().add(t[0], t[1])
+    const momentCompare = moment().add(t[0], t[1])
+
+    expect(dayjsDay.from(dayjsCompare)).toBe(momentDay.from(momentCompare))
+
+    expect(dayjsDay.to(dayjsCompare)).toBe(momentDay.to(momentCompare))
+
+    expect(dayjsDay.from(dayjsCompare, true)).toBe(momentDay.from(momentCompare, true))
+  })
+})
+
+/** Used to map aliases to their real names. */
+exports.aliasToReal = {
+
+  // Lodash aliases.
+  'each': 'forEach',
+  'eachRight': 'forEachRight',
+  'entries': 'toPairs',
+  'entriesIn': 'toPairsIn',
+  'extend': 'assignIn',
+  'extendAll': 'assignInAll',
+  'extendAllWith': 'assignInAllWith',
+  'extendWith': 'assignInWith',
+  'first': 'head',
+
+  // Methods that are curried variants of others.
+  'conforms': 'conformsTo',
+  'matches': 'isMatch',
+  'property': 'get',
+
+  // Ramda aliases.
+  '__': 'placeholder',
+  'F': 'stubFalse',
+  'T': 'stubTrue',
+  'all': 'every',
+  'allPass': 'overEvery',
+  'always': 'constant',
+  'any': 'some',
+  'anyPass': 'overSome',
+  'apply': 'spread',
+  'assoc': 'set',
+  'assocPath': 'set',
+  'complement': 'negate',
+  'compose': 'flowRight',
+  'contains': 'includes',
+  'dissoc': 'unset',
+  'dissocPath': 'unset',
+  'dropLast': 'dropRight',
+  'dropLastWhile': 'dropRightWhile',
+  'equals': 'isEqual',
+  'identical': 'eq',
+  'indexBy': 'keyBy',
+  'init': 'initial',
+  'invertObj': 'invert',
+  'juxt': 'over',
+  'omitAll': 'omit',
+  'nAry': 'ary',
+  'path': 'get',
+  'pathEq': 'matchesProperty',
+  'pathOr': 'getOr',
+  'paths': 'at',
+  'pickAll': 'pick',
+  'pipe': 'flow',
+  'pluck': 'map',
+  'prop': 'get',
+  'propEq': 'matchesProperty',
+  'propOr': 'getOr',
+  'props': 'at',
+  'symmetricDifference': 'xor',
+  'symmetricDifferenceBy': 'xorBy',
+  'symmetricDifferenceWith': 'xorWith',
+  'takeLast': 'takeRight',
+  'takeLastWhile': 'takeRightWhile',
+  'unapply': 'rest',
+  'unnest': 'flatten',
+  'useWith': 'overArgs',
+  'where': 'conformsTo',
+  'whereEq': 'isMatch',
+  'zipObj': 'zipObject'
+};
+
+/** Used to map ary to method names. */
+exports.aryMethod = {
+  '1': [
+    'assignAll', 'assignInAll', 'attempt', 'castArray', 'ceil', 'create',
+    'curry', 'curryRight', 'defaultsAll', 'defaultsDeepAll', 'floor', 'flow',
+    'flowRight', 'fromPairs', 'invert', 'iteratee', 'memoize', 'method', 'mergeAll',
+    'methodOf', 'mixin', 'nthArg', 'over', 'overEvery', 'overSome','rest', 'reverse',
+    'round', 'runInContext', 'spread', 'template', 'trim', 'trimEnd', 'trimStart',
+    'uniqueId', 'words', 'zipAll'
+  ],
+  '2': [
+    'add', 'after', 'ary', 'assign', 'assignAllWith', 'assignIn', 'assignInAllWith',
+    'at', 'before', 'bind', 'bindAll', 'bindKey', 'chunk', 'cloneDeepWith',
+    'cloneWith', 'concat', 'conformsTo', 'countBy', 'curryN', 'curryRightN',
+    'debounce', 'defaults', 'defaultsDeep', 'defaultTo', 'delay', 'difference',
+    'divide', 'drop', 'dropRight', 'dropRightWhile', 'dropWhile', 'endsWith', 'eq',
+    'every', 'filter', 'find', 'findIndex', 'findKey', 'findLast', 'findLastIndex',
+    'findLastKey', 'flatMap', 'flatMapDeep', 'flattenDepth', 'forEach',
+    'forEachRight', 'forIn', 'forInRight', 'forOwn', 'forOwnRight', 'get',
+    'groupBy', 'gt', 'gte', 'has', 'hasIn', 'includes', 'indexOf', 'intersection',
+    'invertBy', 'invoke', 'invokeMap', 'isEqual', 'isMatch', 'join', 'keyBy',
+    'lastIndexOf', 'lt', 'lte', 'map', 'mapKeys', 'mapValues', 'matchesProperty',
+    'maxBy', 'meanBy', 'merge', 'mergeAllWith', 'minBy', 'multiply', 'nth', 'omit',
+    'omitBy', 'overArgs', 'pad', 'padEnd', 'padStart', 'parseInt', 'partial',
+    'partialRight', 'partition', 'pick', 'pickBy', 'propertyOf', 'pull', 'pullAll',
+    'pullAt', 'random', 'range', 'rangeRight', 'rearg', 'reject', 'remove',
+    'repeat', 'restFrom', 'result', 'sampleSize', 'some', 'sortBy', 'sortedIndex',
+    'sortedIndexOf', 'sortedLastIndex', 'sortedLastIndexOf', 'sortedUniqBy',
+    'split', 'spreadFrom', 'startsWith', 'subtract', 'sumBy', 'take', 'takeRight',
+    'takeRightWhile', 'takeWhile', 'tap', 'throttle', 'thru', 'times', 'trimChars',
+    'trimCharsEnd', 'trimCharsStart', 'truncate', 'union', 'uniqBy', 'uniqWith',
+    'unset', 'unzipWith', 'without', 'wrap', 'xor', 'zip', 'zipObject',
+    'zipObjectDeep'
+  ],
+  '3': [
+    'assignInWith', 'assignWith', 'clamp', 'differenceBy', 'differenceWith',
+    'findFrom', 'findIndexFrom', 'findLastFrom', 'findLastIndexFrom', 'getOr',
+    'includesFrom', 'indexOfFrom', 'inRange', 'intersectionBy', 'intersectionWith',
+    'invokeArgs', 'invokeArgsMap', 'isEqualWith', 'isMatchWith', 'flatMapDepth',
+    'lastIndexOfFrom', 'mergeWith', 'orderBy', 'padChars', 'padCharsEnd',
+    'padCharsStart', 'pullAllBy', 'pullAllWith', 'rangeStep', 'rangeStepRight',
+    'reduce', 'reduceRight', 'replace', 'set', 'slice', 'sortedIndexBy',
+    'sortedLastIndexBy', 'transform', 'unionBy', 'unionWith', 'update', 'xorBy',
+    'xorWith', 'zipWith'
+  ],
+  '4': [
+    'fill', 'setWith', 'updateWith'
+  ]
+};
+
+/** Used to map ary to rearg configs. */
+exports.aryRearg = {
+  '2': [1, 0],
+  '3': [2, 0, 1],
+  '4': [3, 2, 0, 1]
+};
+
+/** Used to map method names to their iteratee ary. */
+exports.iterateeAry = {
+  'dropRightWhile': 1,
+  'dropWhile': 1,
+  'every': 1,
+  'filter': 1,
+  'find': 1,
+  'findFrom': 1,
+  'findIndex': 1,
+  'findIndexFrom': 1,
+  'findKey': 1,
+  'findLast': 1,
+  'findLastFrom': 1,
+  'findLastIndex': 1,
+  'findLastIndexFrom': 1,
+  'findLastKey': 1,
+  'flatMap': 1,
+  'flatMapDeep': 1,
+  'flatMapDepth': 1,
+  'forEach': 1,
+  'forEachRight': 1,
+  'forIn': 1,
+  'forInRight': 1,
+  'forOwn': 1,
+  'forOwnRight': 1,
+  'map': 1,
+  'mapKeys': 1,
+  'mapValues': 1,
+  'partition': 1,
+  'reduce': 2,
+  'reduceRight': 2,
+  'reject': 1,
+  'remove': 1,
+  'some': 1,
+  'takeRightWhile': 1,
+  'takeWhile': 1,
+  'times': 1,
+  'transform': 2
+};
+
+        :param rule: The URL rule string.
+        :param options: Extra options passed to the
+            :class:`~werkzeug.routing.Rule` object.
+        """
+
+        def decorator(f: T_route) -> T_route:
+            endpoint = options.pop("endpoint", None)
+            self.add_url_rule(rule, endpoint, f, **options)
+            return f
+
+        return decorator
+
+    @setupmethod
+    def add_url_rule(
+        self,
+        rule: str,
+        endpoint: str | None = None,
+        view_func: ft.RouteCallable | None = None,
+        provide_automatic_options: bool | None = None,
+        **options: t.Any,
+    ) -> None:
+        """Register a rule for routing incoming requests and building
+        URLs. The :meth:`route` decorator is a shortcut to call this
+        with the ``view_func`` argument. These are equivalent:
+
+        .. code-block:: python
+
+            @app.route("/")
+            def index():
+                ...
+
+        .. code-block:: python
+
+            def index():
+                ...
+
+            app.add_url_rule("/", view_func=index)
+
+        See :ref:`url-route-registrations`.
+
+        The endpoint name for the route defaults to the name of the view
+        function if the ``endpoint`` parameter isn't passed. An error
+        will be raised if a function has already been registered for the
+        endpoint.
+
+        The ``methods`` parameter defaults to ``["GET"]``. ``HEAD`` is
+        always added automatically, and ``OPTIONS`` is added
+        automatically by default.
+
+        ``view_func`` does not necessarily need to be passed, but if the
+        rule should participate in routing an endpoint name must be
+        associated with a view function at some point with the
+        :meth:`endpoint` decorator.
+
+        .. code-block:: python
+
+            app.add_url_rule("/", endpoint="index")
+
+            @app.endpoint("index")
+            def index():
+                ...
+
+        If ``view_func`` has a ``required_methods`` attribute, those
+        methods are added to the passed and automatic methods. If it
+        has a ``provide_automatic_methods`` attribute, it is used as the
+        default if the parameter is not passed.
+
+        :param rule: The URL rule string.
+        :param endpoint: The endpoint name to associate with the rule
+            and view function. Used when routing and building URLs.
+            Defaults to ``view_func.__name__``.
+        :param view_func: The view function to associate with the
+            endpoint name.
+        :param provide_automatic_options: Add the ``OPTIONS`` method and
+            respond to ``OPTIONS`` requests automatically.
+        :param options: Extra options passed to the
+            :class:`~werkzeug.routing.Rule` object.
+        """
+        raise NotImplementedError
+
+    @setupmethod
+    def endpoint(self, endpoint: str) -> t.Callable[[F], F]:
+        """Decorate a view function to register it for the given
+        endpoint. Used if a rule is added without a ``view_func`` with
+        :meth:`add_url_rule`.
+
+        .. code-block:: python
+
+            app.add_url_rule("/ex", endpoint="example")
+
+            @app.endpoint("example")
+            def example():
+                ...
+
+        :param endpoint: The endpoint name to associate with the view
+            function.
+        """
+
+        def decorator(f: F) -> F:
+            self.view_functions[endpoint] = f
+            return f
+
+        return decorator
+
+    @setupmethod
+    def before_request(self, f: T_before_request) -> T_before_request:
+        """Register a function to run before each request.
+
+        For example, this can be used to open a database connection, or
+        to load the logged in user from the session.
+
+        .. code-block:: python
+
+            @app.before_request
+            def load_user():
+                if "user_id" in session:
+                    g.user = db.session.get(session["user_id"])
+
+        The function will be called without any arguments. If it returns
+        a non-``None`` value, the value is handled as if it was the
+        return value from the view, and further request handling is
+        stopped.
+
+        This is available on both app and blueprint objects. When used on an app, this
+        executes before every request. When used on a blueprint, this executes before
+        every request that the blueprint handles. To register with a blueprint and
+        execute before every request, use :meth:`.Blueprint.before_app_request`.
+        """
+        self.before_request_funcs.setdefault(None, []).append(f)
+        return f
+
+    @setupmethod
+    def after_request(self, f: T_after_request) -> T_after_request:
+        """Register a function to run after each request to this object.
+
+        The function is called with the response object, and must return
+        a response object. This allows the functions to modify or
+        replace the response before it is sent.
+
+        If a function raises an exception, any remaining
+        ``after_request`` functions will not be called. Therefore, this
+        should not be used for actions that must execute, such as to
+        close resources. Use :meth:`teardown_request` for that.
+
+        This is available on both app and blueprint objects. When used on an app, this
+        executes after every request. When used on a blueprint, this executes after
+        every request that the blueprint handles. To register with a blueprint and
+        execute after every request, use :meth:`.Blueprint.after_app_request`.
+        """
+        self.after_request_funcs.setdefault(None, []).append(f)
+        return f
+
+    @setupmethod
+    def teardown_request(self, f: T_teardown) -> T_teardown:
+        """Register a function to be called when the request context is
+        popped. Typically, this happens at the end of each request, but
+        contexts may be pushed manually during testing.
+
+        .. code-block:: python
+
+            with app.test_request_context():
+                ...
+
+        When the ``with`` block exits (or ``ctx.pop()`` is called), the
+        teardown functions are called just before the request context is
+        made inactive.
+
+        :param exc_class_or_code: Any exception class, or an HTTP status
+            code as an integer.
+        """
+        exc_class: type[Exception]
+
+        if isinstance(exc_class_or_code, int):
+            try:
+                exc_class = default_exceptions[exc_class_or_code]
+            except KeyError:
+                raise ValueError(
+                    f"'{exc_class_or_code}' is not a recognized HTTP"
+                    " error code. Use a subclass of HTTPException with"
+                    " that code instead."
+                ) from None
+        else:
+            exc_class = exc_class_or_code
+
+        if isinstance(exc_class, Exception):
+            raise TypeError(
+                f"{exc_class!r} is an instance, not a class. Handlers"
+                " can only be registered for Exception classes or HTTP"
+                " error codes."
+            )
+
+        if not issubclass(exc_class, Exception):
+            raise ValueError(
+                f"'{exc_class.__name__}' is not a subclass of Exception."
+                " Handlers can only be registered for Exception classes"
+                " or HTTP error codes."
+            )
+
+        if issubclass(exc_class, HTTPException):
+            return exc_class, exc_class.code
+        else:
+            return exc_class, None
+
+
+def _endpoint_from_view_func(view_func: ft.RouteCallable) -> str:
+    """Internal helper that returns the default endpoint for a given
+    function.  This always is the function name.
+    """
+    assert view_func is not None, "expected view func if endpoint is not provided."
+    return view_func.__name__
+
+
+def _find_package_path(import_name: str) -> str:
+    """Find the path that contains the package or module."""
+    root_mod_name, _, _ = import_name.partition(".")
+
+    try:
+        root_spec = importlib.util.find_spec(root_mod_name)
+
+        if root_spec is None:
+            raise ValueError("not found")
+    except (ImportError, ValueError):
+        # ImportError: the machinery told us it does not exist
+        # ValueError:
+        #    - the module name was invalid
+        #    - the module name is __main__
+        #    - we raised `ValueError` due to `root_spec` being `None`
+        return os.getcwd()
+
+    if root_spec.submodule_search_locations:
+        if root_spec.origin is None or root_spec.origin == "namespace":
+            # namespace package
+            package_spec = importlib.util.find_spec(import_name)
+
+            if package_spec is not None and package_spec.submodule_search_locations:
+                # Pick the path in the namespace that contains the submodule.
+                package_path = pathlib.Path(
+                    os.path.commonpath(package_spec.submodule_search_locations)
+                )
+                search_location = next(
+                    location
+                    for location in root_spec.submodule_search_locations
+                    if package_path.is_relative_to(location)
+                )
+            else:
+                # Pick the first path.
+                search_location = root_spec.submodule_search_locations[0]
+
+            return os.path.dirname(search_location)
+        else:
+            # package with __init__.py
+            return os.path.dirname(os.path.dirname(root_spec.origin))
+    else:
+        # module
+        return os.path.dirname(root_spec.origin)  # type: ignore[type-var, return-value]
+
+
+def find_package(import_name: str) -> tuple[str | None, str]:
+    """Find the prefix that a package is installed under, and the path
+    that it would be imported from.
+
+    The prefix is the directory containing the standard directory
+    hierarchy (lib, bin, etc.). If the package is not installed to the
+    system (:attr:`sys.prefix`) or a virtualenv (``site-packages``),
+    ``None`` is returned.
+
+    The path is the entry in :attr:`sys.path` that contains the package
+    for import. If the package is not installed, it's assumed that the
+    package was imported from the current working directory.
+    """
+    package_path = _find_package_path(import_name)
+    py_prefix = os.path.abspath(sys.prefix)
+
+    # installed to the system
+    if pathlib.PurePath(package_path).is_relative_to(py_prefix):
+        return py_prefix, package_path
+
+    site_parent, site_folder = os.path.split(package_path)
+
+    # installed to a virtualenv
+    if site_folder.lower() == "site-packages":
+        parent, folder = os.path.split(site_parent)
+
+        # Windows (prefix/lib/site-packages)
+        if folder.lower() == "lib":
+            return parent, package_path
+
+        # Unix (prefix/lib/pythonX.Y/site-packages)
+        if os.path.basename(parent).lower() == "lib":
+            return os.path.dirname(parent), package_path
+
+        # something else (prefix/site-packages)
+        return site_parent, package_path
+
+    # not installed
+    return None, package_path
+
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "http-proxy-middleware": "^2.0.1",
+    "react-scripts": "^5.0.0"
+  }
+}
+
+services:
+  redis:
+    image: redislabs/redismod
+    ports:
+      - '6379:6379'
+  web:
+    build:
+      context: .
+      target: builder
+    # flask requires SIGINT to stop gracefully
+    # (default stop signal from Compose is SIGTERM)
+    stop_signal: SIGINT
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
