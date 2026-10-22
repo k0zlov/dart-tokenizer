@@ -1,0 +1,551 @@
+OUT-OF-DOMAIN MIXED TEXT — THE HARBOR NOTEBOOK
+Самостійно написаний багатодоменний матеріал для тестування токенізаторів.
+All people, organizations, measurements, and incidents below are fictional examples. The technical fragments belong to this imaginary setting and are included as text, not as instructions to execute.
+
+01. A city that measures the rain / Місто, яке вимірює дощ
+
+At six in the morning, the harbor looked less like a place for ships than a collection of unfinished reflections. Cranes disappeared into low cloud, bicycles leaned against a bakery window, and the first tram carried three passengers and a box of flowers. Mara walked along the eastern quay with a notebook inside her coat. Her task was ordinary: inspect twelve rain gauges before the autumn survey began. Yet each gauge told a slightly different story about the same weather. One stood beneath the edge of a chestnut tree; another received spray whenever a delivery truck crossed the flooded service road. The numbers would need explanations before they could become evidence.
+
+The city had bought the instruments after a season of arguments about drainage. Residents described flooded cellars, engineers described acceptable averages, and the two groups seemed to inhabit separate climates. A monthly total could not show that most of the rain had fallen during seventeen uncomfortable minutes. Mara proposed publishing short observations beside the measurements: a blocked grate, a damaged roof, the direction of the wind. These notes would not replace the data. They would make it harder to mistake a neat column for a complete account of what had happened.
+
+Біля старого мосту її зустрів двірник із термосом. Він не знав точного об'єму опадів, зате пам'ятав, у який момент вода дісталася третьої сходинки. «Тоді ще магазин був відчинений, — сказав він, — а коли приїхав автобус, уже довелося піднімати коробки». Мара записала обидві події. Час можна буде уточнити за розкладом і журналом доставки, але сама послідовність уже допомагала зрозуміти перебіг зливи. Вона не виправляла його слова на мову звіту, поки не переконалася, що правильно почула зміст.
+
+У лабораторії з цих записів мала з'явитися карта. На ній планували показувати не лише сумарні міліметри, а й тривалість інтенсивних опадів, місця спостереження та межі впевненості. Деякі квартали залишалися без датчиків, і ці прогалини вирішили позначити відкрито. Біле місце на карті означало «немає вимірювань», а не «тут сухо». Для мешканців це була дрібна зміна в оформленні; для дослідників — важлива відмова від удаваної точності.
+
+By noon, the rain had stopped. The notebook contained a wet thumbprint, a crooked sketch of a drain, and a reminder to replace one battery. None of these looked impressive in isolation. Together, however, they described a city more faithfully than a single confident sentence about average conditions. Mara closed the cover and went to the bakery, where the flowers from the morning tram had finally arrived.
+
+02. The library of repairs / Бібліотека ремонту
+
+The neighborhood library had inherited a room full of broken things. There were desk lamps with loose switches, a radio that hummed without finding a station, and a wooden chair whose owner insisted that it had only become unstable after being moved upstairs. Instead of treating the room as storage, the librarian opened it on Saturday afternoons. People could bring an object, explain its history, and learn whether repair was possible. The rule was simple: nobody had to pretend to understand a mechanism before asking a question about it.
+
+An elderly visitor brought a kitchen timer shaped like a pear. Its spring still worked, but the bell remained silent. He explained that the timer had belonged to his sister and that buying a replacement would solve the wrong problem. A volunteer placed the pieces on a white tray and photographed each stage of disassembly. The fault turned out to be a bent metal tab, almost invisible beside the larger components. When the bell sounded again, everyone in the room looked up. The visitor laughed, then asked for a copy of the photographs so that he could show his granddaughter what had happened inside the pear.
+
+Українська назва проєкту виникла не одразу. «Майстерня» звучала так, ніби відвідувачі мали залишати речі й повертатися за готовим результатом. «Клуб ремонту» натякав на постійне членство. Зрештою на дверях написали: «Бібліотека ремонту: приходьте з річчю та запитанням». Усередині справді можна було позичити інструмент, але найчастіше люди забирали із собою знання: як розпізнати зношений кабель, чому деревина реагує на вологість, навіщо перед розбиранням робити фотографії.
+
+Не кожна історія завершувалася успіхом. Для одного програвача бракувало деталі, яку давно перестали виготовляти. Іншу річ вирішили не вмикати через пошкоджену ізоляцію. У журналі це записали без прикрас: «Потрібне професійне обстеження; під час зустрічі не ремонтували». Такі записи виявилися корисними. Вони показували, що чесна межа можливостей також є результатом роботи, а слово «відремонтовано» повинно означати щось конкретне.
+
+At the end of the month, the librarian counted objects, volunteer hours, and pages added to the repair notebook. She also recorded less tidy outcomes: two neighbors had met for the first time, a teenager had learned to label screws before removing them, and someone had returned a borrowed screwdriver wrapped in a thank-you note. The report was not an advertisement for endless consumption with a green border. It was an account of attention: what happened when people spent an afternoon looking carefully at things they already owned.
+
+03. Seeds on the upper floor / Насіння на верхньому поверсі
+
+The greenhouse occupied a roof that had once held only ventilation equipment and abandoned satellite dishes. Its beds were shallow, its corridors narrow, and its caretaker unusually protective of the door hinges. Every gust that entered through an open door could change the temperature near the seedlings. Visitors expected a futuristic farm, but most of the work involved ordinary judgments: whether a leaf was pale because of insufficient light, whether the soil beneath a dry surface was still damp, whether a promising experiment deserved another week.
+
+The research group compared three planting schedules rather than three miracle fertilizers. They wanted to know whether a modest shift in timing could reduce wasted heat during cold evenings. Each tray had a durable label, and each observation included the name of the person who made it. On cloudy days, the plants near the western wall received different light from those beside the stairs. Randomizing tray positions helped, but it did not erase every difference. The final analysis would need to acknowledge the shape of the building as well as the design of the experiment.
+
+Олена відповідала за насіння місцевих сортів. Вона зберігала його в паперових пакетах, на яких було більше слів, ніж чисел: «зі східної грядки», «зібрано після сухого тижня», «плоди достигали нерівномірно». Колега запропонував перенести все в таблицю. Олена погодилася, але попросила не викидати самі пакети. Частина написів була непевною, частина потребувала пояснення, а почерк іноді допомагав установити, хто саме передав зразок. Цифровий запис мав доповнити історію, а не стерти її.
+
+Навесні до теплиці прийшов клас школярів. Діти сперечалися, чи можна назвати дах полем, і уважно шукали комах під листям. Найскладнішим виявилося пояснити, чому дві однаково политі рослини ростуть по-різному. Олена показала їм коріння, затінений кут і термометр біля дверей. «Однакова дія не завжди означає однакові умови», — сказала вона. Учитель записав цю фразу, бо вона підходила не лише до ботаніки.
+
+By summer, the roof supplied a small amount of produce and a much larger amount of useful uncertainty. Some varieties performed well in the cool corner; others needed deeper soil than the beds could offer. Nobody claimed that the greenhouse would feed the city. Its value lay in making specific questions answerable and in showing the cooks downstairs why a fresh delivery occasionally contained leaves of very different sizes.
+
+04. Recording a quiet room / Як записати тишу
+
+When the sound archive asked for a recording of the old assembly hall, the caretaker suggested coming at night. During the day, traffic passed outside, pipes clicked behind the walls, and office doors interrupted every long pause. The archivist agreed, then discovered that nighttime had its own machinery. A refrigerator in the adjoining kitchen switched on every few minutes. Wind pressed against a loose pane of glass. Somewhere above the stage, a cable touched a metal support with a delicate, irregular tap.
+
+She made several recordings instead of hunting for a perfect absence of sound. One microphone stood in the center of the floor, another near the balcony, and a third faced the closed entrance. Before each take, she spoke the location and the time. Later listeners would hear those announcements and understand that the recordings came from distinct positions. Removing the labels might make the files feel more atmospheric, but it would also remove the information needed to compare them responsibly.
+
+Уранці архівістка послухала записи разом із доглядачем. Він одразу впізнав холодильник, проте здивувався звуку біля балкона. У звичайний день цей легкий стукіт губився в розмовах. Вони піднялися нагору й знайшли незакріплений кабель. Так запис, задуманий як історичний документ, несподівано став підказкою для дрібного ремонту. Після того як кабель закріпили, приміщення вже звучало трохи інакше, і цей факт також додали до опису.
+
+У каталозі не написали «абсолютна тиша». Натомість з'явилася назва «Нічний звуковий фон зали перед ремонтом». Вона була довшою й менш поетичною, зате точнішою. Архів зберігав не уявлення про ідеальний простір, а конкретний стан будівлі. Через багато років дослідник зможе почути і повітря в трубах, і віддалений транспорт, і коротке пояснення людини, яка встановила мікрофони.
+
+The caretaker asked whether anyone would truly want to hear a room in which nothing important happened. The archivist answered that importance often arrived late. A familiar door, a disappearing appliance, or a pattern of street traffic could become interesting after the surrounding city changed. He considered this while locking the hall, then asked her to record the key turning in the old brass lock. That sound, he said, would probably disappear next year.
+
+05. A market with two clocks / Ринок із двома годинниками
+
+The market opened according to two clocks. The official one hung over the entrance and determined when deliveries could enter. The other lived in the habits of customers: early shoppers wanted bread and vegetables, midday visitors wanted something warm, and late arrivals hoped for a patient conversation about whatever remained. Vendors learned to translate between the clocks. A stall could be legally open and practically finished, or officially closed while its owner still helped a neighbor carry a crate to the bus stop.
+
+Lena studied the market for a transport project. At first she counted vehicles, expecting the busiest hour to explain the largest delays. It did not. A short delivery at the wrong doorway could obstruct more movement than several trucks parked correctly. She began drawing small maps of individual encounters: a handcart waiting for a bicycle, a customer stepping backward to read a sign, a driver unable to see around stacked containers. The problem was spatial as much as numerical.
+
+Продавець сиру запропонував пересунути одну лавку на пів метра. Здавалося, це надто мала зміна для проєкту з офіційною назвою та кольоровими схемами. Але після пересування зник вузький прохід, де люди щодня зупиняли одне одного. Лена спостерігала за ділянкою ще кілька ранків, щоб не зробити висновок із випадкового спокійного дня. Покращення зберігалося навіть тоді, коли приїхала велика поставка і почався дощ.
+
+У звіті довелося пояснити, чому жоден графік сам по собі не показував причини затримок. Кількість відвідувачів лишилася майже незмінною, а час проходу скоротився. Важливою була взаємодія людей із предметами: положення лавки, ширина дверей, місце для порожніх ящиків. Рішення не виглядало технологічним, проте спиралося на уважне спостереження й перевірку.
+
+One vendor summarized the result in a sentence Lena kept at the beginning of her notes: “You made room for people to hesitate.” It was an unexpectedly precise description. Markets require hesitation. Customers compare, ask, remember, change their minds, and greet someone they have not seen in months. A plan that treated every pause as an error would have made the place efficient only by making it less useful to the people who came there.
+
+06. The museum label / Музейна етикетка
+
+The object was a small ceramic cup with a repaired handle and an uncertain date. Earlier catalogues called it ceremonial, domestic, regional, or imported, depending on the decade in which the description had been written. The museum's new curator placed all four labels on the table and asked a basic question: which claims came from evidence about the cup, and which came from expectations about the collection? The room grew quiet because the labels had always looked more settled when they stood alone.
+
+A conservator examined the adhesive beneath the handle. A historian compared the decoration with workshop records. A student searched the acquisition correspondence and found that the donor had used the word “probably” twice in the original letter. Both qualifications had vanished from the printed catalogue. No one had deliberately falsified the history. Each revision had simply become a little smoother, a little shorter, and a little more certain than the previous one.
+
+Нову етикетку написали так, щоб відвідувач міг відрізнити спостереження від припущення. Матеріал і розміри були відомі. Майстерню лише припускали. Обставини ремонту залишалися невстановленими. Поруч розмістили фотографію старого листа з поясненням, чому його обережне формулювання має значення. Дехто вважав, що така подача послаблює авторитет музею. Кураторка відповідала: авторитет не повинен залежати від прихованих сумнівів.
+
+Під час першої екскурсії школяр запитав, чи можна пити з цієї чашки. Питання повернуло розмову від каталогів до самої речі. Колись її хтось тримав, мив, ставив на стіл, можливо, ненавмисно впустив. Невизначеність щодо дати не заважала говорити про ці звичайні дії. Навпаки, вона звільняла місце для уважного розглядання потертостей, нерівної глазурі й сліду біля відновленої ручки.
+
+The final label was slightly longer than the old one and much less grand. It described a useful vessel whose history had been partly recovered. Visitors spent more time with it than the curator expected. Some read the correspondence; others leaned closer to inspect the repair. A careful admission of uncertainty had turned an apparently finished story into an invitation to look.
+
+07. Walking beside the river / Стежка вздовж річки
+
+The proposed riverside path looked simple on a planning map: a continuous line joining the station to the western park. On the ground, continuity became complicated. The route crossed a loading entrance, passed beneath a bridge, and narrowed beside a wall that belonged to an old workshop. In dry weather, most people managed without difficulty. After rain, a shallow depression filled with water and forced pedestrians toward the road. Wheelchair users and parents with strollers had been describing this detour for years.
+
+The design team organized a slow walk instead of another meeting around drawings. Participants stopped where they normally stopped, waited where they normally waited, and explained what they could or could not see. A man with limited vision described how the sound changed beneath the bridge. A courier pointed out that the loading gate opened without warning. A child noticed that the only bench faced a blank wall while the river remained behind the person sitting on it.
+
+Маршрут оцінювали не лише за його середньою шириною. Для людини, яка не може обійти калюжу, значення має найвужче місце. Для того, хто швидко втомлюється, відстань між лавками важливіша за загальну довжину прогулянки. Ці речі важко побачити на схемі, де всі відрізки однаково тонкі, а поверхня завжди суха. Після спільного проходу команда змінила порядок робіт: спочатку водовідведення та безпечний виїзд, потім покриття й озеленення.
+
+Не всі побажання вдалося виконати одразу. Біля майстерні залишався складний земельний кордон, а перенесення опори потребувало окремого погодження. У публічному плані ці обмеження описали прямо й указали тимчасовий обхід. Мешканці могли сперечатися з таким рішенням, але принаймні бачили, що саме затримує роботу. Найгіршим варіантом було б намалювати безперервну красиву лінію й приховати розрив, який люди щодня зустрічали насправді.
+
+When the first section opened, the celebration was modest. Someone brought tea, the child tested the newly turned bench, and the courier rode through slowly enough to wave. The path was still unfinished, but the troublesome puddle no longer sent people into traffic. The team recorded that result before discussing the next phase. A useful improvement did not need to wait for the entire map to become perfect.
+
+08. Bread, heat, and patience / Хліб, тепло й терпіння
+
+The bakery's new oven came with a screen that displayed temperatures to one decimal place. This delighted the accountant and irritated the head baker, who had spent twenty years judging heat by the behavior of dough near the door. Neither reaction was entirely fair. The display offered useful consistency, but it measured one location inside a complicated chamber. A tray placed near the rear could brown differently from a tray beside the fan, even while the number on the screen remained beautifully stable.
+
+For two weeks, the bakers kept a shared notebook. They recorded dough temperature, resting time, tray position, and observations about the crust. They also wrote down interruptions: a late flour delivery, an unusually cold storeroom, a batch divided between two workers. The notebook did not eliminate judgment. It gave judgment a memory. When a loaf emerged with a pale underside, the team could investigate a pattern instead of arguing from whichever morning each person happened to remember most clearly.
+
+Покупці помітили зміни раніше, ніж працівники сформулювали висновки. Одна жінка сказала, що скоринка стала рівномірнішою. Інший відвідувач сумував за темнішим краєм, який вважав найсмачнішою частиною. Пекарі зрозуміли, що стабільність не тотожна загальному задоволенню. Вони залишили один різновид із довшим випіканням і підписали його зрозуміло, без вигаданих обіцянок про особливу традицію.
+
+Увечері, коли останні дека вже охололи, молодий працівник запитав, чи не зробить детальний облік професію механічною. Старша пекарка відповіла, що записи допомагають помічати те, чого не видно з одного буханця. Вони не можуть відчути пружність тіста замість людини, зате нагадують, що вчора борошно зберігали в іншому приміщенні. Добрий інструмент не забирає увагу; він повертає її до важливих відмінностей.
+
+The final operating sheet contained ranges, descriptions, and a small sketch of recommended tray positions. It was less elegant than the oven's promotional brochure and far more useful at five in the morning. Someone added a handwritten line beneath the printed instructions: “If the result disagrees with the display, describe the result.” That sentence survived every later revision of the sheet.
+
+09. An unexpected overnight stop / Незапланована ночівля
+
+By the time the train reached the mountain junction, the last connecting bus had gone. The station café was closing, and the woman behind the counter had already stacked half the chairs. Daniel asked whether there was a hotel within walking distance. She pointed toward a yellow house beyond the tracks and then, noticing his suitcase, suggested the longer road around the square. The shortcut had steps. He thanked her, bought the remaining cheese sandwich, and stepped into an evening that smelled of wet stone and chimney smoke.
+
+The guesthouse had three rooms, a narrow staircase, and a resident cat whose expression suggested that visitors were an administrative inconvenience. At breakfast, the owner brought plum jam and explained that the bus would not leave until after the school run. Daniel had planned a tightly organized weekend in a distant city. Instead, he found himself with two free hours in a town he had never intended to visit. He left his suitcase under the stairs and walked toward the river, following the sound of someone practicing a trumpet behind an open window.
+
+На березі працювала невелика майстерня човнів. Чоловік у синьому светрі шліфував дерев'яний борт і час від часу зупинявся, щоб перевірити поверхню долонею. Даніель не хотів заважати, але майстер сам привітався й запитав, чи не з потяга він. З'ясувалося, що запізнілі мандрівники регулярно проходили цією вулицею. Для них станція була невдачею маршруту, для містечка — звичайним джерелом ранкових знайомств.
+
+Розмова тривала недовго. Майстер показав старий човен, який готував для місцевого свята, а Даніель розповів про місто, куди поспішав. Потім він купив на площі яблуко й повернувся до гостьового будинку. Кіт спав на валізі, наче офіційно взяв її під охорону. Господиня запропонувала ще кави, але автобус уже чекав біля школи. Цього разу він прийшов завчасно.
+
+Weeks later, Daniel could remember almost nothing about the conference room at his intended destination. He remembered the trumpet, the smell of sanded wood, and the surprising weight of a sleeping cat on a suitcase. When a friend asked whether the journey had gone well, he started to explain the missed connection, stopped, and said that it had gone differently. The distinction seemed worth keeping.
+
+10. Beneath the night sky / Під нічним небом
+
+The astronomy club met on a football field because it offered the widest view available without leaving town. Members brought folding chairs, red flashlights, thermoses, and a telescope that required two people to carry safely across the uneven grass. Before darkness settled, they argued about cloud cover. After darkness settled, they argued about whether the pale strip near the horizon was cloud, distant light, or an unfortunate combination of both. Nobody seemed disappointed. Waiting was part of the evening.
+
+A new member expected the planets to resemble the large, richly colored images she had seen in books. Through the eyepiece, the first target appeared tiny. She stepped back, uncertain whether the telescope had been adjusted correctly. An experienced observer invited her to look again and wait for a moment of steadier air. A narrow detail briefly sharpened, then softened. The experience demanded a different kind of attention from looking at a finished photograph. It was less spectacular, but it belonged to that particular night and her own eye.
+
+Поки дорослі налаштовували обладнання, діти придумували назви для сузір'їв, яких не було в атласі. Одна група зірок нагадувала загублену рукавичку, інша — чайник із надто довгим носиком. Керівник гуртка не поспішав виправляти їх. Спочатку вони вчилися бачити відносне розташування точок, а вже потім могли дізнатися традиційні назви. Власна рукавичка на небі запам'ятовувалася краще, ніж чужий складний герой із незнайомої легенди.
+
+Близько опівночі стало холодно. Хтось розлив чай, хтось шукав кришку від окуляра, а над полем пролетіла сова. У блокноті записали стан неба, використане збільшення та кілька коротких вражень. Жодного відкриття не сталося. Проте нова учасниця вже знала, як обережно підійти до телескопа, не зрушивши його, і чому іноді варто затриматися біля окуляра довше, ніж хочеться спочатку.
+
+They packed away the equipment under a sky that had finally become clear. This was mildly unfair and entirely normal. On the walk to the gate, the group stopped once more, now without instruments, to identify a familiar pattern above the rooftops. Someone called it the lost mitten. The unofficial name remained in use for the rest of the season.
+
+11. A kitchen in translation / Кухня в перекладі
+
+The community cookbook began with a disagreement about a handful. One contributor meant the amount held in a cupped palm; another meant whatever could be gathered between the fingers. A third said that her grandmother had never measured anything and would have considered the question slightly rude. The editor asked everyone to prepare the dish once while another person watched. Soon the kitchen table held bowls, scales, stained notebooks, and a collection of increasingly precise arguments about onions.
+
+Recipes traveled badly when every familiar word was treated as universal. “Cook until ready” could describe a visible change in color, a particular resistance to a spoon, or simply the moment before something burned. The group added sensory descriptions without pretending that all equipment behaved alike. They recorded pan size, approximate heat, and how the mixture looked at important stages. Where ingredients varied by region, they explained the desired property rather than naming a single supposedly perfect substitute.
+
+Український рецепт вареників містив фразу «тісто має відпочити». Перекладач спочатку передав її буквально, і це всім сподобалося. Та наступне речення потребувало уточнення: скільки часу, під чим накрити, як зрозуміти, що можна працювати далі? Авторка показала рух пальців, яким перевіряла пружність. Фото допомогло краще за довгий абзац, але коротке пояснення все одно залишили для тих, хто користуватиметься лише текстом.
+
+На полях з'являлися сімейні історії. Один суп готували після повернення з далекої дороги, інший — коли в домі збиралося більше гостей, ніж очікували. Редактор не намагався перетворити кожну страву на символ цілої країни. Люди описували власні кухні, власні звички й конкретних родичів. Саме ця невелика точність робила збірку живою: читач міг уявити стіл, за яким рецепт справді використовували.
+
+In the French contribution, a note read: «Ajoutez le bouillon petit à petit, puis goûtez avant de saler. La patience compte davantage que la force du feu.» The German page advised: „Den Deckel nicht ständig anheben; sonst entweicht zu viel Wärme.“ A Spanish cook wrote: «Si la masa se pega, espera un momento antes de añadir más harina». The editor kept these sentences beside the translations. Their rhythms carried something useful that a list of ingredients could not preserve.
+
+12. The parcel with no room number / Посилка без номера кімнати
+
+The parcel arrived at the university reception with a surname, a department, and no room number. By itself, this was unremarkable. What made it difficult was the presence of three people with the same surname, two of whom worked in the named department and one of whom had recently moved there. The receptionist resisted the temptation to guess. She checked the delivery note, contacted the departmental office, and placed the parcel on a shelf marked “awaiting clarification.” It was a small administrative pause that prevented a much longer search later.
+
+Inside the package, once it reached the correct recipient, was a set of replacement parts for a student-built water sampler. The team had been waiting for a connector that looked almost identical to the one already on the bench. The difference lay in the thread pitch. An earlier order had used a photograph as the main reference, and the photograph had concealed the distinction perfectly. This time the students compared the printed specification, the label, and the physical part before signing it into their inventory.
+
+У лабораторії вирішили переглянути назви деталей. Записи на кшталт «малий перехідник» або «синій кабель» працювали лише доти, доки всі пам'ятали конкретний предмет. Нові учасники витрачали час на здогадки, а старі іноді сперечалися про різні речі, використовуючи однакові слова. Команда додала розміри, тип з'єднання та внутрішні ідентифікатори, залишивши звичні назви як допоміжні.
+
+Це не перетворило майстерню на ідеально впорядковане місце. На столах усе ще лежали недопиті чашки, а коробка з кріпленнями містила кілька загадкових предметів невідомого походження. Проте наступне замовлення оформлювали швидше. Студентка, яка приєдналася лише тиждень тому, змогла знайти потрібну деталь без довгої екскурсії по чужій пам'яті. Для керівника саме це стало найкращою перевіркою нових позначень.
+
+The receptionist eventually received a thank-you card with a drawing of the completed sampler. She pinned it beside the delivery schedule. Below the drawing, someone had written the correct room number in unusually large letters. The card became a quiet joke among the staff, but the missing field disappeared from almost every subsequent order.
+
+13. Clothes for another season / Одяг на наступний сезон
+
+The costume workshop had a deadline that sounded generous until the designer unfolded the list of scenes. A coat needed to look elegant in the first act, weathered in the second, and repaired in the third, all while surviving repeated performances and a hurried change backstage. There was no budget for three completely separate versions. The wardrobe supervisor proposed removable cuffs, reversible panels, and a carefully placed patch that could be attached during the interval.
+
+Fabric samples covered the table. Under daylight, two dark blues looked nearly identical; beneath the stage lamps, one became flat and the other unexpectedly bright. The team brought samples into rehearsal and watched them from the back row. A beautiful texture that vanished at a distance was less useful than a simpler material with a readable shape. The actor also needed to sit, kneel, and raise an arm without dragging the entire coat upward. Appearance and movement had to be negotiated together.
+
+Кравчиня позначала зміни крейдою, поки актор повторював коротку сцену. Він щоразу трохи інакше сідав на стілець, і шов поводився по-різному. Замість просити його рухатися «правильно» вона змінила запас тканини під рукою. Костюм мав підтримувати роль, а не змушувати людину весь вечір пам'ятати про обмеження підкладки. Наприкінці примірки актор забув, що на ньому нова річ, і це було добрим знаком.
+
+Окремо підготували інструкцію для тих, хто працюватиме за лаштунками. У ній не було складних термінів: «права кишеня — лист», «темний бік назовні», «латку прикріпити після дзвінка». Позначки розмістили там, де їх можна побачити при слабкому світлі. На репетиції зміни костюма засікли час, знайшли незручну застібку й замінили її до прем'єри. П'ять хвилин уважності в майстерні зберегли спокій у найнапруженіший момент вистави.
+
+After the final performance, the coat returned to storage with a small envelope containing spare fasteners and a record of alterations. It no longer belonged entirely to the original sketch. It carried the practical knowledge of everyone who had worn, adjusted, cleaned, and repaired it. The supervisor hung it beneath a breathable cover and wrote one last note: “Comfortable in motion; check the left cuff before reuse.”
+
+14. The pond after winter / Ставок після зими
+
+The pond behind the school was smaller than it looked on the map and deeper than the children expected. In early spring, dead leaves gathered along one edge while the opposite bank caught the afternoon sun. The science teacher divided the class into observation groups. Some measured water temperature from the shore, others drew plants, and a third group counted visible insects without attempting to identify every species. The purpose was to learn how to describe a place before attaching conclusions to it.
+
+One group announced that the sunny side contained more life. Another pointed out that their own shaded patch had clearer water, which made small movements easier to see. The teacher asked them to exchange positions and repeat the observation for the same amount of time. The result did not settle every question, but it changed the conversation. Visibility, patience, and location had all influenced the counts. A surprising number was now a starting point for investigation rather than an immediate victory for one team.
+
+На наступному уроці діти порівнювали малюнки. Хтось ретельно відтворив кожен листок, хтось показав лише форму берега, а одна учениця намалювала тінь від дерева, бо вважала її важливою для температури води. Учитель запропонував зібрати спільну схему з різних спостережень. Виявилося, що неповні описи можуть доповнювати один одного, якщо зрозуміло, на що саме дивився кожен автор.
+
+До літа ставок змінився. Очерет закрив частину огляду, вода прогрілася, а стежка стала сухою й твердою. Діти хотіли порівняти нові числа з весняними, але спочатку мусили відновити умови спостереження. Не всі точки вдалося знайти точно. Біля однієї виросла густа трава, інша опинилася за огорожею. У підсумковій роботі вони написали про ці обмеження власними словами, без готового шаблону.
+
+On the last visit, the teacher allowed ten minutes without worksheets. The class sat quietly enough to hear movements in the reeds. Later, several children described this as the most memorable part of the project. They had spent weeks learning to count what they could see; the pause reminded them that the pond continued beyond the categories printed on their pages.
+
+15. The small newspaper / Невелика газета
+
+The district newspaper occupied two rooms above a pharmacy. Its editor also checked photographs, answered subscription questions, and occasionally carried bundles to the corner shop. On Wednesday afternoon, the lead story concerned a proposed change to the bus route. A draft headline said that the route would close. The attached document said something narrower: one option under discussion would remove the evening loop while retaining the daytime service. The difference was large enough to change the headline and the entire opening paragraph.
+
+The reporter called the transport office, then spoke with residents who used the evening loop. One worked late at a bakery; another visited a relative after dinner. Their concerns gave the story practical detail, but neither person could confirm what the authority would decide. The editor kept those roles distinct. A personal account explained the consequences of a proposal. It did not establish the proposal's final status. The article could be clear about both without sounding evasive.
+
+Перед друком надійшла фотографія переповненого автобуса. Знімок був виразний, але зроблений під час торішнього ярмарку, коли діяв інший розклад. Його можна було використати лише з точним підписом, і редактор вирішив обрати менш ефектне актуальне фото зупинки. На ньому було видно лавку, табличку й людей, які чекали свого рейсу. Ілюстрація не доводила більше, ніж могла довести.
+
+У п'ятницю читач зателефонував і вказав на помилку в назві вулиці. В електронній версії її виправили, додавши коротку примітку, а для наступного номера підготували уточнення. Редактор не любив помилятися, але ще менше любив удавати, що правильний текст існував від початку. Довіра маленької газети залежала від багатьох таких непомітних рішень, а не лише від великих матеріалів.
+
+By evening, the bundles were ready. The bus story shared the front page with a photograph of a repaired playground and a notice about a missing dog that had already been found. The editor updated the notice before sending the file to the printer. It was a minor revision, but somewhere a relieved family would appreciate it more than the careful work on the headline above.
+
+16. Letters from three workshops / Листи з трьох майстерень
+
+Berlin, Werkstattbrief: Heute haben wir den alten Arbeitstisch ans Fenster gerückt. Das klingt nach einer kleinen Veränderung, aber plötzlich sieht man die feinen Kratzer im Holz viel besser. Am Vormittag kam eine Nachbarin mit einer Schublade, die sich nicht mehr schließen ließ. Wir dachten zuerst an Feuchtigkeit. Tatsächlich hatte sich eine Schraube gelöst und stand kaum sichtbar über. Nach der Reparatur blieb sie noch auf einen Kaffee. Sie erzählte, dass der Schrank früher in einer Buchhandlung gestanden hatte. Jetzt bewahrt sie darin Karten, Fotos und die Briefe ihrer Mutter auf.
+
+Am nächsten Samstag wollen wir keine neuen Projekte beginnen. Stattdessen sortieren wir die Werkzeuge und beschriften die flachen Kästen. Niemand erinnert sich mehr daran, warum drei verschiedene Zangen unter „Sonstiges“ liegen. Vielleicht finden wir dabei auch den kleinen Schlüssel wieder, der seit dem Sommer fehlt. Bitte bringt keine perfekten Ordnungssysteme mit, sondern Vorschläge, die auch an einem müden Abend funktionieren. Ein guter Platz für ein Werkzeug ist einer, den man ohne lange Erklärung wiederfindet.
+
+Lyon, carnet partagé : La pluie a commencé juste avant l'ouverture de l'atelier. Nous avons déplacé les chaises pour éviter les gouttes près de la porte, puis installé une grande feuille de papier sur la table. Chacun devait dessiner un objet utilisé tous les jours. Les dessins étaient très différents : une tasse, un ticket de tramway, un trousseau de clés, une petite lampe. La discussion a porté sur les détails que l'on remarque seulement lorsque l'objet ne fonctionne plus. Une poignée trop lisse, par exemple, peut sembler élégante jusqu'au moment où les mains sont mouillées.
+
+Nous avons décidé de garder les premiers croquis, même les plus maladroits. Ils montrent les questions qui ont précédé les solutions. La semaine prochaine, une relieuse viendra expliquer comment choisir le sens du papier avant de plier une couverture. Elle a demandé une table stable, de la lumière et un peu de temps. Aucun de ces éléments ne paraît extraordinaire, mais leur absence peut compliquer le travail le plus simple. À bientôt, et n'oubliez pas le carnet bleu qui est resté près de la fenêtre.
+
+Valencia, nota del taller: Esta tarde probamos la mesa nueva con personas de distintas alturas. Al principio parecía suficiente cambiar las patas, pero el problema también estaba en el espacio para las rodillas. Una participante explicó que necesitaba acercarse más para trabajar sin levantar los hombros. Hicimos una modificación pequeña y repetimos la prueba. Fue útil escuchar la descripción del movimiento antes de proponer una solución. Las medidas del plano no contaban toda la historia del cuerpo sentado frente a la mesa.
+
+Para la próxima reunión traeremos muestras de madera, cartón y tela. No hace falta comprar materiales especiales; pueden servir restos limpios de otros trabajos. Queremos construir modelos sencillos que permitan discutir formas y distancias. Si algo no funciona, lo anotaremos junto al dibujo. Un modelo equivocado puede ser valioso cuando deja claro qué pregunta debemos hacer después. Por favor, avisa si necesitas una descripción escrita de las imágenes o un lugar más tranquilo durante la actividad.
+
+The three letters were pinned beside a Ukrainian translation and a map with colored threads. None of the workshops used the same vocabulary for every tool, and some terms resisted a neat one-word equivalent. The coordinator left short explanations in the margins. «Тут ідеться про напрям волокон паперу», — зазначила вона біля французького листа. Next to the German note she added, “Sonstiges is the drawer where categories go to disappear.” The joke survived translation unusually well.
+
+17. Field recorder: an imagined interface specification
+
+The following documentation describes an invented service used by the harbor survey. A station submits observations in batches because network access near the quay is unreliable. The server accepts a batch only after checking its structure, station identifier, timestamps, and sequence numbers. Receipt does not mean that a measurement has passed scientific review. The transport layer answers the question “Did this record arrive intact?” while the review process asks “What can this record reasonably tell us?” These are separate states in the example workflow.
+
+Endpoint: POST https://telemetry.example.org/v2/observations
+Media type: application/json; charset=utf-8
+Illustrative request headers:
+  Content-Type: application/json
+  Accept: application/json
+  X-Request-ID: 4d18b2c0-7a65-4e91-8b2d-0f6a73c912ab
+  Idempotency-Key: quay-east-20261022-batch-0042
+
+An idempotency key identifies a logical upload attempt. If a station retries the same batch after losing the response, it must reuse the key and preserve the payload. A changed payload requires a different key. In this fictional specification, the service retains keys for forty-eight hours. A client that retries outside that interval must first check the batch status; otherwise it may create duplicate observations. This policy is part of the imagined application, not a claim about any real service.
+
+The station clock may drift. Therefore each record carries both an observation time and a monotonically increasing local sequence. The sequence helps detect gaps, but it cannot prove an absolute time. If the clock is corrected, the device starts a new clock segment and records the adjustment explicitly. Sorting by timestamp alone would hide some of these transitions. Review tools should display the original timestamp and the correction metadata rather than silently replacing one with the other.
+
+Example request body:
+{
+  "schema_version": "2.1",
+  "station_id": "harbor-east-07",
+  "batch_id": "4d18b2c0-7a65-4e91-8b2d-0f6a73c912ab",
+  "observed_at": "2026-10-22T06:15:30.125+03:00",
+  "location": {"latitude": 49.123456, "longitude": 28.654321},
+  "operator": {"display_name": "Мара Коваль", "email": "mara.koval@example.org"},
+  "measurements": [
+    {"sequence": 1041, "kind": "rainfall", "value": 0.8, "unit": "mm"},
+    {"sequence": 1042, "kind": "air_temperature", "value": 12.75, "unit": "°C"},
+    {"sequence": 1043, "kind": "battery_voltage", "value": 3.91, "unit": "V"}
+  ],
+  "quality_flags": ["manual_inspection", "clock_checked"],
+  "comment": "Поруч мокре листя; inlet clear; Tür geschlossen ✅",
+  "attachments": [],
+  "reviewed_at": null,
+  "test_mode": true,
+  "literal_escape_example": "first line\nsecond line\tquoted: \"sample\"",
+  "windows_path": "C:\\Survey\\incoming\\station-07.json"
+}
+
+For a structurally valid request, the fictional server returns an acknowledgement containing the batch identifier and an acceptance time. Validation failures include a field path, a stable error code, and a readable description. The description may be translated; the code remains suitable for programmatic handling. A client must not parse an English sentence to decide whether a retry is appropriate. If the value is outside the instrument's declared range, the original observation remains in a quarantine record for inspection rather than being quietly clipped to the nearest boundary.
+
+Приклад повідомлення оператору: «Пакет отримано, але показник температури потребує перевірки. Початкове значення збережено». Це формулювання відрізняється від «Помилка завантаження»: у першому випадку повторне надсилання не виправить сам вимір. Інтерфейс має пояснювати наступну корисну дію, а не просто показувати червоний значок. Для польової роботи це особливо важливо, бо оператор може мати повільний зв'язок і лише кілька хвилин біля станції.
+
+18. Configuration, deployment notes, and an ordinary mistake
+
+The imaginary application has two environments: a local rehearsal and a demonstration instance. Its sample configuration contains no credentials. Connection details use reserved example domains and documentation addresses. The maintainers keep comments close to the settings they explain, but they do not treat comments as a replacement for validation. A misspelled field should produce a visible error instead of being ignored until someone wonders why the system behaves differently from the file.
+
+YAML example:
+service:
+  name: harbor-notebook
+  environment: rehearsal
+  base_url: https://telemetry.example.org
+  bind_address: 127.0.0.1
+  port: 8087
+storage:
+  directory: ./data/observations
+  filename_pattern: "{station}/{date}/batch-{sequence}.json"
+  preserve_original_bytes: true
+limits:
+  max_records_per_batch: 250
+  max_body_bytes: 1048576
+  timeout_seconds: 12.5
+retry:
+  max_attempts: 4
+  delays_seconds: [1, 3, 9]
+display:
+  locale: uk-UA
+  timezone: Europe/Kyiv
+  missing_value_label: "Немає даних"
+  title: "Польовий журнал — тестова станція"
+notes: |
+  Keep raw observations separate from reviewed values.
+  Не перезаписуйте коментарі під час повторного імпорту.
+  Une valeur absente n'est pas nécessairement égale à zéro.
+
+During rehearsal, a developer copied a numeric identifier into a spreadsheet and later exported it as a rounded value. The change was small on screen and serious in the data. The team revised the example configuration to make identifier types explicit. Quantities such as temperature remained numbers; identifiers such as station serials remained strings even when they contained only decimal digits. A number can be added, averaged, or rounded meaningfully. A serial number usually cannot.
+
+The deployment note also distinguished a relative directory from an absolute one. A path beginning with ./ depends on the working directory; a path beginning with / does not. On another platform, a drive letter and backslashes introduce yet another convention. These distinctions appear elementary until a job runs successfully in a terminal and writes its output somewhere unexpected when launched by a scheduler. The fictional team added the resolved output path to its startup message and saved an afternoon of searching.
+
+Sample paths and resource names:
+  ./data/raw/2026-10-22/станція-07.txt
+  ../fixtures/mixed domain/notes (revised).md
+  /srv/harbor/archive/2026/10/batch_000042.ndjson
+  /home/demo/Documents/Звіти/осінь/виміри.csv
+  C:\Users\Demo\Documents\Harbor Survey\report-final.txt
+  \\lab-server\public\samples\calibration_β.json
+  s3://example-survey-bucket/rehearsal/part-00003.parquet
+  file:///tmp/harbor%20notebook/preview.html
+
+These names are examples in a text fixture. They do not imply that the paths exist, that the bucket is accessible, or that anything should be downloaded. In a tokenizer test, the distinction matters because the same visible fragment can appear as prose, a literal string, or a resource identifier. The byte sequence is the object being measured; the surrounding explanation gives it a plausible reason to occur.
+
+19. Python: summarizing a small set of observations
+
+The code below is deliberately compact. It demonstrates ordinary identifiers, annotations, punctuation, a Unicode docstring, and a distinction between missing values and numerical zero. The sample excludes missing values when calculating the mean. It raises an error for negative rainfall rather than interpreting a negative value as a missing observation. A production implementation would also need instrument-specific rules, persistence, and tests, but those concerns are outside this small illustrative fragment.
+
+```python
+from dataclasses import dataclass
+from decimal import Decimal
+from typing import Iterable
+
+
+@dataclass(frozen=True)
+class Observation:
+    station: str
+    rainfall_mm: Decimal | None
+    note: str = ""
+
+
+def mean_rainfall(rows: Iterable[Observation]) -> Decimal | None:
+    """Обчислити середнє; відсутність виміру не дорівнює нулю."""
+    values: list[Decimal] = []
+    for row in rows:
+        value = row.rainfall_mm
+        if value is None:
+            continue
+        if not value.is_finite() or value < 0:
+            raise ValueError(f"Invalid rainfall for {row.station!r}: {value}")
+        values.append(value)
+    if not values:
+        return None
+    return sum(values, start=Decimal("0")) / Decimal(len(values))
+
+
+observations = [
+    Observation("east-07", Decimal("0.0"), "Без опадів"),
+    Observation("west-02", Decimal("1.5"), "Легка злива 🌧️"),
+    Observation("roof-11", None, "Sensor unavailable"),
+]
+result = mean_rainfall(observations)
+print(f"Mean rainfall: {result} mm")  # 0.75 mm
+```
+
+У цьому фрагменті нуль бере участь в обчисленні, а None — ні. Відмінність здається очевидною, доки порожню клітинку автоматично не заповнять нулем під час імпорту. Тоді середнє зміниться, хоча жоден новий вимір не з'явився. Текстовий коментар сам по собі не запобігає помилці, проте робить задум функції зрозумілішим для наступної людини, яка читатиме код.
+
+A separate naming discussion concerned the variable called “clean.” It had originally contained rows that passed a syntax check, which did not mean that their measurements were scientifically reliable. The team renamed it “parsed_rows.” This was a small change with a useful consequence: later code no longer inherited an accidental promise from an overly reassuring name. Names cannot encode every assumption, but they should avoid declaring more than the program has established.
+
+20. TypeScript, Rust, and a page in the browser
+
+The next fragments describe different layers of the same imaginary application. The TypeScript example formats a review state for display. The Rust example checks a sequence for strictly increasing values. Neither function contacts a server. They are included because source code introduces token boundaries that differ from ordinary prose: brackets nest, punctuation clusters, naming conventions vary, and short symbols can carry substantial meaning.
+
+```typescript
+type ReviewState =
+  | { kind: "pending"; receivedAt: string }
+  | { kind: "approved"; reviewer: string }
+  | { kind: "flagged"; reasons: readonly string[] };
+
+export function describeReview(state: ReviewState): string {
+  switch (state.kind) {
+    case "pending":
+      return `Очікує перевірки · ${state.receivedAt}`;
+    case "approved":
+      return `Reviewed by ${state.reviewer} ✓`;
+    case "flagged":
+      return `Needs attention: ${state.reasons.join("; ")}`;
+  }
+}
+
+const label = describeReview({
+  kind: "flagged",
+  reasons: ["clock offset > 2 s", "перевірити вхідний отвір"],
+});
+console.log(label);
+```
+
+```rust
+#[derive(Debug, PartialEq)]
+enum SequenceError {
+    NotIncreasing { previous: u64, current: u64 },
+}
+
+fn verify_sequence(values: &[u64]) -> Result<(), SequenceError> {
+    for pair in values.windows(2) {
+        if pair[1] <= pair[0] {
+            return Err(SequenceError::NotIncreasing {
+                previous: pair[0],
+                current: pair[1],
+            });
+        }
+    }
+    Ok(())
+}
+
+fn main() {
+    let sample = [1_040, 1_041, 1_043];
+    println!("{:?}", verify_sequence(&sample));
+    // A gap is allowed here; duplicate or decreasing values are not.
+}
+```
+
+The browser page avoids using color as the only indication of status. A visible word accompanies the colored border. The text remains meaningful when copied into a plain document, read aloud, or printed without color. A small layout decision therefore affects more than visual appearance. It determines whether the information survives changes in presentation.
+
+```html
+<!doctype html>
+<html lang="uk">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Польовий журнал — станція 07</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .status { border-inline-start: 0.3rem solid #658c43; padding: 0.8rem; }
+    code { overflow-wrap: anywhere; }
+    @media (max-width: 36rem) { body { margin-block: 1rem; } }
+  </style>
+  <main>
+    <h1>Спостереження біля східної набережної</h1>
+    <p class="status"><strong>Отримано:</strong> пакет очікує перевірки.</p>
+    <p>Ідентифікатор: <code>quay-east/2026-10-22/0042</code></p>
+    <p lang="en">Original notes remain available after review.</p>
+  </main>
+</html>
+```
+
+Під час обговорення сторінки оператор попросив показувати дату повністю. Короткий запис «10/11» був зручним для макета, але неоднозначним для міжнародної команди. Розробниця обрала текстовий підпис «11 жовтня 2026 року» для інтерфейсу та окремий машинний формат для обміну. Одне представлення не мусило одночасно виконувати всі завдання.
+
+21. SQL, tabular export, and the missing afternoon
+
+The sample database stores a raw observation and its review status separately. This allows a reviewer to explain a concern without replacing the original value. The query below selects a bounded interval using a start time that is included and an end time that is excluded. Adjacent intervals can then meet without counting the shared boundary twice. The syntax follows a PostgreSQL-style example and is included as source text for the stress test.
+
+```sql
+CREATE TABLE observation (
+    observation_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    station_id TEXT NOT NULL,
+    measured_at TIMESTAMPTZ NOT NULL,
+    rainfall_mm NUMERIC(10, 3),
+    note TEXT NOT NULL DEFAULT '',
+    CHECK (rainfall_mm IS NULL OR rainfall_mm >= 0)
+);
+
+SELECT
+    station_id,
+    COUNT(*) AS submitted_rows,
+    COUNT(rainfall_mm) AS measured_rows,
+    AVG(rainfall_mm) AS mean_rainfall_mm
+FROM observation
+WHERE measured_at >= TIMESTAMPTZ '2026-10-22 00:00:00+03:00'
+  AND measured_at <  TIMESTAMPTZ '2026-10-23 00:00:00+03:00'
+GROUP BY station_id
+ORDER BY station_id;
+
+SELECT observation_id, note
+FROM observation
+WHERE note ILIKE '%листя%'
+   OR note ILIKE '%inlet%';
+```
+
+The first count includes rows whose rainfall field is missing. The second count does not. Displaying both makes the difference visible. If the afternoon sensor outage is represented by rows with null measurements, the submitted-row count alone may suggest a complete day. A reviewer needs to know how many values were actually measured, as well as whether the timestamps cover the desired period.
+
+CSV sample, with commas inside quoted fields and doubled quotation marks:
+station_id,observed_at,rainfall_mm,note
+east-07,2026-10-22T06:15:00+03:00,0.800,"Листя прибрано, отвір вільний"
+west-02,2026-10-22T06:20:00+03:00,0.000,"Operator wrote ""no rain"" in the log"
+roof-11,2026-10-22T06:25:00+03:00,,"Missing value; not a measured zero"
+north-04,2026-10-22T06:30:00+03:00,1.125,"Wind from W/NW; température stable"
+
+TSV sample; the fields on the following three lines are separated by actual tab characters:
+station	status	note
+east-07	pending	Перевірити час
+west-02	approved	No visible obstruction
+
+В експорті важливо зберігати не лише значення, а й правила їх читання. Порожнє поле може означати відсутній вимір; рядок "0" означає інше. Кома буває роздільником колонок або частиною примітки. Лапки всередині тексту потребують екранування відповідно до обраного формату. Якщо різні програми припускають різні правила, зовні правдоподібна таблиця може приховувати зсув колонок або втрату частини коментаря.
+
+22. Addresses, identifiers, and long strings in context
+
+The coordinator wrote to survey-desk@example.org and copied archive+autumn@example.net. Her message referred to a preview at https://docs.example.org/harbor/field-notes?lang=uk&station=east-07#clock-check. A second link used percent-encoded text: https://example.org/search?q=%D0%B4%D0%BE%D1%89%20rain&limit=25. Neither address represents an actual correspondence in this story; they are syntactically plausible examples using reserved domains. A tokenizer must still handle the punctuation, repeated subwords, query separators, and encoded bytes.
+
+The network appendix listed the documentation address 192.0.2.47, the IPv6 address 2001:db8:42:7::10, and the bracketed form [2001:db8:42:7::10]:8443. The local demonstration used http://127.0.0.1:8087/health. A device label read sensor-east_07.rev-B, while an internal record used the case-sensitive key StationID. These forms look related to a person, but a program may assign different meanings to each character. Renaming them casually can turn a readable note into an inaccurate one.
+
+Sample identifiers:
+  UUID A: 4d18b2c0-7a65-4e91-8b2d-0f6a73c912ab
+  UUID B: 9f2c6a71-30bd-4e08-a9c4-15d782bf6e30
+  Hexadecimal fixture, 64 digits: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+  Another hash-shaped fixture: fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210
+  Base64 text fixture: SGFyYm9yIG5vdGVib29r
+  Binary notation: 0b10110100_01101101
+  Hex notation: 0x7FFF_FF01; octal notation: 0o755
+  Semantic version example: 2.7.0-rc.3+survey.20261022
+
+The two long hexadecimal strings above are fixed test values, not checksums calculated from this document. Calling every long string a checksum would blur the difference between an identifier's appearance and its derivation. In a real integrity check, the algorithm and the exact input bytes would also need to be specified. The note makes this distinction because filenames, labels, and pasted diagnostic output often imply more certainty than their author intended.
+
+Long decimal fixtures are kept as strings in the imagined import process:
+  "0000000000000000000000000000000000000042"
+  "123456789012345678901234567890123456789012345678901234567890"
+  "987654321098765432109876543210987654321098765432109876543210"
+  "314159265358979323846264338327950288419716939937510582097494"
+
+The opening zeros in the first fixture are significant characters. The last fixture is simply a long decimal string in this context; no calculation depends on recognizing its familiar prefix. A stress test benefits from both recognizable structure and unfamiliar boundaries. It does not need thousands of meaningless digits to discover whether an encoding can reconstruct a string exactly.
+
+23. A short numerical appendix / Короткий числовий додаток
+
+The fictional invoice contains three distinct currencies: €1,234.56, US$987.65, and ₴12 345,67. A note below it gives £48.90 for shipping and CHF 75.00 for packaging. These figures are sample amounts, not current prices or exchange-rate information. In another locale, the same numerical quantity might be written 1.234,56 or 1 234,56. The narrow no-break space in the latter form is not an ordinary space, even though a reader may barely notice the difference.
+
+The rehearsal schedule starts at 2026-10-22T08:30:00+03:00, which represents the same instant as 2026-10-22T05:30:00Z. A separate appointment is written as “22 жовтня 2026 року, 14:05”; another as “Thursday, 22 October 2026, 14:05”. The ambiguous shorthand 03/04/2026 appears only in a discussion of why the team avoids it. Durations use forms such as 00:02:17.450, 135 ms, 2.5 s, and P3DT4H. Dates, elapsed time, and local clock readings should not be treated as interchangeable quantities.
+
+У навчальному прикладі частка перевірених записів зросла з 40% до 50%. Це збільшення на 10 відсоткових пунктів, або на 25% від початкового рівня. Обидва формулювання правильні за відповідного пояснення, але вони відповідають на різні запитання. У примітці також наведено числа 0,125 і 0.125: вони можуть позначати однакову величину в різних локалях, хоча текстові послідовності відрізняються.
+
+Mathematical notation in the notebook:
+  x ∈ ℝ, n ∈ ℕ, A ⊆ B, A ∩ B ≠ ∅, and ∀ε > 0 ∃δ > 0.
+  f(x) = x² + 2x + 1 = (x + 1)²; therefore f(−1) = 0.
+  ∑ᵢ₌₁ⁿ xᵢ / n is written here as a compact mean expression.
+  ∫₀¹ x² dx = ⅓; √2 ≈ 1.41421356; π ≈ 3.14159265.
+  a ≤ b, b ≥ c, p ≠ q, u × v, r · s, and ΔT = 2.5 °C.
+  2⁻³ = 0.125; 10⁶ = 1,000,000; 6.02 × 10²³ is a sample magnitude.
+  H₂O, CO₂, NH₃, m·s⁻², kg/m³, μm, Ω, λ, and ∂f/∂x.
+
+The minus in −1 is a mathematical minus sign, while the hyphen in station-07 is ordinary ASCII punctuation. The multiplication sign × differs from the Latin letter x. The micro sign µ and the Greek small letter μ are visually similar but distinct characters. An exact round trip should retain these distinctions. A normalized search index may intentionally treat some of them alike, but that is a separate transformation and should not be hidden inside an encoding benchmark.
+
+24. Unicode in the visitors' book / Unicode у книзі відвідувачів
+
+The exhibition visitors' book contained more writing systems than the organizers had anticipated. Beside English and Ukrainian comments were the short greetings Καλημέρα, こんにちは, 안녕하세요, 你好, مرحبًا, שלום, and नमस्ते. The archivist did not ask the scanning software to transliterate them automatically. She kept the original text and added translations only when a visitor or a competent reader could supply one. An unfamiliar script was not a defect to be repaired.
+
+For the encoding test, several short samples appear explicitly. The pair “café” and “café” has a similar visible appearance, but the second version ends with an e followed by a combining acute accent. The pair “ї” and “ї” illustrates a related distinction using a Ukrainian letter. Likewise, “Å” and “Å” may look alike while using different sequences. These examples should remain as written in this file. Converting them to a common normalization form would change the test input.
+
+An exhibit label showed a few less common characters beside their context: 𐍈 as a historical-script sample, 𓂀 as a hieroglyphic sample, 𝄞 as a musical symbol, and 𠮷 as a character outside the basic multilingual plane. A neighboring case displayed the letter forms ẞ, ß, Œ, œ, Ł, ł, Đ, đ, Æ, and æ. The purpose was not to imply that they belong to one language. It was to show how much variety a single text-processing pipeline may encounter.
+
+Українські відвідувачі звернули увагу на апострофи: п'ять, п’ять, пʼять. Перший запис використовує прямий ASCII-символ, другий — типографічний апостроф, третій — окремий модифікаторний знак. Для читача ці варіанти часто передають те саме слово, але для побайтового порівняння вони різні. Поруч стояли слова ґанок, їжак, єдність, об'єкт, зв'язок, м'який, пів'яблука та незвично-довга-назва-станції.
+
+The punctuation strip read: "straight quotes", “curly quotes”, ‘single quotes’, «guillemets», „deutsche Anführungszeichen“, and ‹narrow quotation marks›. A second strip compared hyphen-minus -, en dash –, em dash —, minus sign −, ellipsis …, and three full stops .... A third contained ordinary space in “north quay”, a no-break space in “north quay”, and a narrow no-break space in “north quay”. These short contrasts are intentional; the rest of the document does not rely on invisible tricks.
+
+Emoji were part of the visitors' comments rather than an endless decorative wall. “The repaired lamp works again 💡✅,” wrote one person. Another left, “Дякуємо за майстерню 🛠️, дитина в захваті 🙂.” The weather page showed 🌧️ → 🌤️ → 🌈. A family described their visit with 👨‍👩‍👧‍👦, while a volunteer signed a note with 🧑🏽‍🔬 and a tiny plant 🌱. The notebook also contains 👍, 👍🏽, 🇺🇦, 🇩🇪, and 🏳️‍🌈. Some visible emoji contain multiple Unicode code points, including modifiers, variation selectors, or joining characters.
+
+The archivist's small display card was drawn with box characters:
+┌─────────────────────────────────┐
+│ Original text → encode → decode  │
+│ Exact comparison: bytes + text   │
+└─────────────────────────────────┘
+
+Below it, a Braille sample ⠓⠑⠇⠇⠕ stood beside a note about tactile reading. The organizers did not assume that printing Braille characters on a flat screen made the exhibition accessible to a Braille reader. Representation and access were separate questions. That practical observation brought the discussion back from abstract character tables to the people who might actually use the archive.
+
+25. Conversation at the shared table / Розмова за спільним столом
+
+“Я оновила field notes, але raw measurements залишила без змін,” said Olena as she opened the notebook. “The summary looks cleaner now, проте для station-07 ще треба перевірити часову мітку.” Her colleague nodded and replied, “Добре, let's keep the original comment; переклад додамо окремим полем.” Their language switching was ordinary workplace shorthand. Neither speaker was trying to demonstrate a linguistic category; each used the phrase that came most readily while the other followed without difficulty.
+
+At the next table, a visitor asked, “Ist der Workshop morgen, чи ми перенесли його на п'ятницю?” The coordinator answered, “Morgen um zehn, у тій самій кімнаті; please arrive a little early if you need the large table.” Someone else called across the room, “Le fichier est prêt, але назва ще стара — use the version ending in _reviewed.” The mixture was understandable because the participants shared a task, a room, and a set of objects they could point to.
+
+Після зустрічі координаторка переписала домовленості зрозумілою українською та англійською. Розмовна суміш добре працювала для присутніх, але не обов'язково допомагала тим, хто читатиме запис пізніше. Вона зберегла цитати там, де форма вислову була цікавою, і зробила окремий список рішень. Так документ міг одночасно передавати атмосферу розмови й бути практичним джерелом інформації.
+
+“¿Puedes revisar цей абзац після обіду?” asked the editor. “Sí, but leave the numerical examples exactly as they are.” The proofreader had already discovered that a well-meaning correction could turn a deliberately unusual character into a familiar one. In ordinary publishing that might be desirable. In this particular fixture, however, variety was part of the purpose. They marked the exceptional strings and edited the surrounding prose for clarity without smoothing every edge.
+
+A final exchange concerned the word “token.” One visitor associated it with a transport ticket, another with a security credential, and a third with a unit produced by a text tokenizer. The coordinator wrote three short examples on the board: “a brass tram token,” “an access token,” and “a sequence of subword tokens.” Context resolved the ambiguity more effectively than insisting that a word had only one proper meaning.
+
+26. Closing the notebook / Остання сторінка
+
+The harbor exhibition closed on a mild evening. Volunteers folded tables, returned borrowed lamps, and checked the windows before leaving. The rain gauges remained outside, indifferent to the event that had briefly made them interesting to a room full of visitors. Mara took the last stack of comment cards to the office. Some contained suggestions, others drawings, and one merely said that the tea had been excellent. She placed that card beside the repair photographs because it seemed as much a part of the day as anything else.
+
+У коридорі ще пахло папером і мокрими куртками. Олена знайшла під стільцем загублений олівець, перевірила, чи вимкнено настільну лампу, й залишила на дошці коротку записку для ранкової зміни. Вона не стала підсумовувати всю подію урочистими словами. Достатньо було написати, де лежать ключі, які коробки вже можна забирати та кому належить зелений термос.
+
+Outside, the square was returning to its usual shape. A bus stopped beside the market; someone hurried toward it carrying a loaf of bread. In the upper window of the workshop, a person moved a chair closer to the light. These were small actions, almost too familiar to describe. Yet the notebook had been built from precisely such things: a delayed journey, a repaired bell, a misplaced parcel, a sentence translated carefully enough to preserve its uncertainty.
+
+Наступного тижня в місті знову йшов дощ. Біля мосту вода піднялася лише до першої сходинки. Мара зробила вимір, додала короткий коментар і перевірила, чи правильно записала час. Потім сховала блокнот під куртку та пішла далі вздовж набережної. Попереду чекала ще одна станція, а за нею — пекарня, де ранкова партія хліба щойно з'явилася на полиці.
+
+End of the independent mixed-domain fixture. Кінець самостійного змішаного тексту.
